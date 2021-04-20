@@ -1,5 +1,6 @@
 # Laser Intensity Stabilization
 This project is under development.
+
 [Development Notebook](https://docs.google.com/document/d/1RtXi4E6TiI_Ld4MZSRgFrHrQVlKGbRzDl3qZmrDYwTk/edit#)
 
 ## Introduction
