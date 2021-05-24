@@ -10,10 +10,10 @@ We are aiming to stabilize intensity of laser to a fluctuation range of plus-min
 ## P 3/2 Life Measurement
 
 ## Problems and Goal
-# Problems
+### Problems
 Laser intensity oscillates with time, and fluctuation of about 15% of total intensity power without stabilization can be detected. This unstable laser intensity affects the precision of Ra-226 excitation.
 
-# Goal
+### Goal
 Our goal for this research is to find a laser stabilization method that works for any lasers with any desired intensity. Users are able to manually set the desired intensity. The proportional and integral constants in the PID controller will be able to change on its own corresponding to the input signals.
 
 
@@ -38,5 +38,3 @@ The attenuation of our ZX73-2500+ attenuator is non-linear. The nonlinearity wou
 - Voltage Controlled Oscillator: [ZX95-100-S+](https://www.minicircuits.com/WebStore/dashboard.html?model=ZX95-100-S%2B)
 - Voltage Variable Attenuator: [ZX73-2500-S+](https://www.minicircuits.com/WebStore/dashboard.html?model=ZX73-2500-S%2B)
 - RF Amplifier: [ZHL-1-2W+](https://www.minicircuits.com/WebStore/dashboard.html?model=ZHL-1-2W%2B)
-
-## Goal
