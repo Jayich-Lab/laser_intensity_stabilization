@@ -7,6 +7,16 @@ This project is under development.
 
 We are aiming to stabilize intensity of laser to a fluctuation range of plus-minus 1% using Acousto-optic Modulator (AOM) for a long timescale (in the order of days). This stabilization will improve the precision of experiments that use laser beams.
 
+## P 3/2 Life Measurement
+
+## Problems and Goal
+# Problems
+Laser intensity oscillates with time, and fluctuation of about 15% of total intensity power without stabilization can be detected. This unstable laser intensity affects the precision of Ra-226 excitation.
+
+# Goal
+Our goal for this research is to find a laser stabilization method that works for any lasers with any desired intensity. Users are able to manually set the desired intensity. The proportional and integral constants in the PID controller will be able to change on its own corresponding to the input signals.
+
+
 ## Schematics
 <img src="https://github.com/vivian-liao/laser_intensity_stabilization/blob/00ad7da555807ec47b507d962022d027033bcd3a/Intensity%20stablization%20schematic%20iteration%201.jpg" width="800">
 
@@ -30,4 +40,3 @@ The attenuation of our ZX73-2500+ attenuator is non-linear. The nonlinearity wou
 - RF Amplifier: [ZHL-1-2W+](https://www.minicircuits.com/WebStore/dashboard.html?model=ZHL-1-2W%2B)
 
 ## Goal
-Our goal for this research is to find a laser stabilization method that works for any lasers with any desired intensity. Users are able to manually set the desired intensity. The proportional and integral constants in the PID controller will be able to change on its own corresponding to the input signals.
