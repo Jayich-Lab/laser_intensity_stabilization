@@ -8,8 +8,8 @@ This project is under development.
 We are aiming to stabilize intensity of laser to a fluctuation range of plus-minus 1% using Acousto-optic Modulator (AOM) for a long timescale (in the order of days). This stabilization will improve the precision of experiments that use laser beams.
 
 ## P 3/2 Life Measurement
+### Lifetime Measurement
 
-## Problems and Goal
 ### Problems
 Laser intensity oscillates with time, and fluctuation of about 15% of total intensity power without stabilization can be detected. This unstable laser intensity affects the precision of Ra-226 excitation.
 
