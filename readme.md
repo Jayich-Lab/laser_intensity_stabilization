@@ -24,8 +24,8 @@ Our goal for this research is to find a laser stabilization method that works fo
 ### Experiment Setup Schematics
 <img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/8adf60ae177b7b4bb6f551d9992dfffc9aff9274/Experiment%20Setup.png" width="800">
 
-- The laser beam will first go through the AOM, which determines the intensity that goes through. We use the zeroth order beam. 
-- 10 percent of the power will be recieved by the photodiode, and a divider divides the power signal into DC and AC. The divided signals are the live signals that will be analyzed in the PID program.
+- The laser beam first goes through AOM (Acousto-Optic Modulator), which acts as the controller of the laser intensity. It uses acousto-optic effect (Briggs diffraction) to diffract and shift the frequency of the light, and the amount of light diffracted by the sound wave depends on the intensity of the sound. Thus, we use the intensity of the sound to modulate the intensity of the light. For our project, we use the first order beam.
+- 10 percent of the power is recieved by the photodiode (P.D.), and a divider divides the power signal into DC and AC. The divided signals are the live signals that will be analyzed in the PID program.
 - A PID program is built in Red Pitaya. It collects signals from the photodiode and compare it to a setpoint which we are aiming for the laser to be stabilized at. The PID program will then return a DC gain signal that will be sent to a voltage variable attenuator.
 - The attenuator receives a DC gain signal as well as an RF reference signal, and it will output an RF gain with its amplitude related to the DC input corresponding to the figure below.
 - The RF gain is then amplified by an op-amp and put back into the AOM to alter the intensity that goes through.
