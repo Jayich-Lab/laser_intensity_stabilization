@@ -22,7 +22,7 @@ Our goal for this research is to find a laser stabilization method that works fo
 <img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/e3ffd6075bf42a9dc5e550fbc7e51a863ef81b96/feedback%20loop%20logic%20flow.png" width="400">
 
 ### Experiment Setup Schematics
-<img src="https://github.com/vivian-liao/laser_intensity_stabilization/blob/00ad7da555807ec47b507d962022d027033bcd3a/Intensity%20stablization%20schematic%20iteration%201.jpg" width="800">
+<img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/8adf60ae177b7b4bb6f551d9992dfffc9aff9274/Experiment%20Setup.png" width="800">
 
 - The laser beam will first go through the AOM, which determines the intensity that goes through. We use the zeroth order beam. 
 - 10 percent of the power will be recieved by the photodiode, and a divider divides the power signal into DC and AC. The divided signals are the live signals that will be analyzed in the PID program.
