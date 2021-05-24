@@ -18,6 +18,10 @@ Our goal for this research is to find a laser stabilization method that works fo
 
 
 ## Schematics
+### Feedback Loop
+<img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/e3ffd6075bf42a9dc5e550fbc7e51a863ef81b96/feedback%20loop%20logic%20flow.png" width="600">
+
+### Experiment Setup Schematics
 <img src="https://github.com/vivian-liao/laser_intensity_stabilization/blob/00ad7da555807ec47b507d962022d027033bcd3a/Intensity%20stablization%20schematic%20iteration%201.jpg" width="800">
 
 - The laser beam will first go through the AOM, which determines the intensity that goes through. We use the zeroth order beam. 
