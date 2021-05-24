@@ -24,11 +24,11 @@ Our goal for this research is to find a laser stabilization method that works fo
 ### Experiment Setup Schematics
 <img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/b2fe35d18d52c8cc31f6680785b2dc8ce0ade054/Experiment%20Setup%20with%20number.png" width="800">
 
-- The laser beam first goes through Acousto-Optic Modulator (AOM)[1], which acts as the controller of the laser intensity. It uses acousto-optic effect (Briggs diffraction) to diffract and shift the frequency of the light, and the amount of light diffracted by the sound wave depends on the intensity of the sound. Thus, we use the intensity of the sound to modulate the intensity of the light. For our project, we use the first order beam.
-- 10 percent of the power is recieved by the photodiode[2], and a divider[3] divides the power signal into DC and AC. The divided signals are the live signals that will be analyzed in the PID program.
-- A PID program is built in Red Pitaya[4]. It collects signals from the photodiode and compare it to a setpoint which we are aiming for the laser to be stabilized at. The PID program will then return a DC gain signal that will be sent to a voltage variable attenuator[5].
+- The laser beam first goes through Acousto-Optic Modulator (AOM) [1], which acts as the controller of the laser intensity. It uses acousto-optic effect (Briggs diffraction) to diffract and shift the frequency of the light, and the amount of light diffracted by the sound wave depends on the intensity of the sound. Thus, we use the intensity of the sound to modulate the intensity of the light. For our project, we use the first order beam.
+- 10 percent of the power is recieved by the photodiode [2], and a divider [3] divides the power signal into DC and AC. The divided signals are the live signals that will be analyzed in the PID program.
+- A PID program is built in Red Pitaya [4]. It collects signals from the photodiode and compare it to a setpoint which we are aiming for the laser to be stabilized at. The PID program will then return a DC gain signal that will be sent to a voltage variable attenuator [5].
 - The attenuator receives a DC gain signal as well as an RF reference signal, and it will output an RF gain with its amplitude related to the DC input corresponding to the figure below.
-- The RF gain is then amplified by an op-amp[7] and put back into the AOM to alter the intensity that goes through.
+- The RF gain is then amplified by an op-amp [7] and put back into the AOM to alter the intensity that goes through.
 
 <img src="https://github.com/vivian-liao/laser_intensity_stabilization/blob/f4062dce6361fdb36354567c01299cb552100ea4/Screen%20Shot%202021-04-20%20at%208.15.58%20AM.png" width="400">
 
