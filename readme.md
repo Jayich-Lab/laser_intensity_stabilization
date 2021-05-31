@@ -6,12 +6,12 @@ We are aiming to stabilize intensity of laser to a fluctuation range of plus-min
 
 ## Table of Contents
 - [Motivation](#Motivation)
-- List of Components
-- Schematics
-- Feedback Loop
-- First Iteration
-- Future Plans
-- Contributors
+- [List of Components](#List-of-Components)
+- [Schematics](#Schematics)
+- [Feedback Loop](#Feedback-Loop)
+- [First Iteration](#First-Iteration)
+- [Future Plans](#(Future-Plans)
+- [Contributors](#Contributors)
 
 # Motivation
 ## P 3/2 Life Measurement
