@@ -33,19 +33,26 @@ The laser beam will be received by a detector, and the signal will be sent to th
 ## Experiment Setup Schematics
 <img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/b2fe35d18d52c8cc31f6680785b2dc8ce0ade054/Experiment%20Setup%20with%20number.png" width="800">
 
-- The laser beam first goes through fiber between two fiber ports.
-- Then the beam goes through Acousto-Optic Modulator (AOM) [1], which acts as the controller of the laser intensity. It uses acousto-optic effect (Briggs diffraction) to diffract and shift the frequency of the light, and the amount of light diffracted by the sound wave depends on the intensity of the sound. Thus, we use the intensity of the sound to modulate the intensity of the light. For our project, we use the first order beam.
+First, the laser beam goes through fiber between two fiber ports. Then the beam goes through Acousto-Optic Modulator (AOM) [1], which acts as the controller of the laser intensity. 
 - 10 percent of the power is recieved by the photodiode [2], and a divider [3] divides the power signal into DC and AC. The divided signals are the live signals that will be analyzed in the PID program.
 - A PID program is built in Red Pitaya [4]. It collects signals from the photodiode and compare it to a setpoint which we are aiming for the laser to be stabilized at. The PID program will then return a DC gain signal that will be sent to a voltage variable attenuator [5].
 - The attenuator receives a DC gain signal as well as an RF reference signal, and it will output an RF gain with its amplitude related to the DC input corresponding to the figure below.
 - The RF gain is then amplified by an op-amp [7] and put back into the AOM to alter the intensity that goes through.
 
+## Acousto-Optics Modulator (AOM)
+It uses acousto-optic effect (Briggs diffraction) to diffract and shift the frequency of the light, and the amount of light diffracted by the sound wave depends on the intensity of the sound. Thus, we use the intensity of the sound to modulate the intensity of the light. For our project, we use the first order beam.
+
+## Red Pitaya
+
+## Voltage Variable Attenuator (VVA)
 <img src="https://github.com/vivian-liao/laser_intensity_stabilization/blob/f4062dce6361fdb36354567c01299cb552100ea4/Screen%20Shot%202021-04-20%20at%208.15.58%20AM.png" width="400">
 
 The attenuation of our ZX73-2500+ attenuator is non-linear. The nonlinearity would require inputing the control signal at higher voltage to achieve high precision.
 
-## First Iteration
+# Feedback Loop
+
+# First Iteration
 <img src ="https://user-images.githubusercontent.com/77765489/119746311-0f153100-be45-11eb-9ecc-4c6befbecd9d.png" width = "800">
 
-## Future Plans
+# Future Plans
 For P 3/2 life measurement, we need a pulsed feedback that turns on and off for millliseconds. Currently we use double AOM CW feedback as the setup; however, there are two issues to be solved. First, the double AOM CW feedback has an intensity delay, which causes failure in the PID control; second, the paused feedback must be run from DACO, ?????. A possible solution for the issues may be to use Arduino as the PID controller with the same experimental setup.
