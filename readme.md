@@ -19,7 +19,7 @@ Our goal for this research is to find a laser stabilization method that works fo
 
 ## Schematics
 ### Feedback Loop
-<img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/e3ffd6075bf42a9dc5e550fbc7e51a863ef81b96/feedback%20loop%20logic%20flow.png" width="400">
+<img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/7b60d4b73dc1dd47e8584cc6f8f1f7bfb11b91e6/feedback%20loop%20logic%20flow.png" width="400">
 
 ### Experiment Setup Schematics
 <img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/b2fe35d18d52c8cc31f6680785b2dc8ce0ade054/Experiment%20Setup%20with%20number.png" width="800">
