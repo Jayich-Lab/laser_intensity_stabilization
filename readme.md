@@ -17,6 +17,9 @@ We are aiming to stabilize intensity of laser to a fluctuation range of plus-min
   - [Red Pitaya](#Red-Pitaya)
   - [Voltage Variable Attenuator (VVA)](#Voltag-Variable-Attenuator-VVA)
 - [Feedback Loop](#Feedback-Loop)
+  - [PID Controller](#PID-Controller)
+  - [Continuous (CW) Feedback](#Continuous-CW-Feedback)
+  - [Pulsed Feedback](#Pulsed-Feedback)
 - [First Iteration](#First-Iteration)
 - [Future Plans](#Future-Plans)
 - [Contributors](#Contributors)
@@ -79,10 +82,10 @@ The purpose of using a VVA in our project is to avoid the failure of the feedbac
 ## PID Controller
 <img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/e3fd1acefe8639c5e60ba01c673978963c45f419/PID%20controller.png" width="600">
 
-## Continuous (CW) feedback
+## Continuous (CW) Feedback
 <img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/e3fd1acefe8639c5e60ba01c673978963c45f419/pulsed%20feedback.png" width="600">
 
-## Pulsed feedback
+## Pulsed Feedback
 <img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/e3fd1acefe8639c5e60ba01c673978963c45f419/pulsed%20feedback%20fig.png" width="600">
 
 # First Iteration
