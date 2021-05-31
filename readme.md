@@ -55,7 +55,7 @@ First, the laser beam goes through fiber between two fiber ports. Then the beam 
 - The RF gain is then amplified by an op-amp [7] and put back into the AOM to alter the intensity that goes through.
 
 ## Acousto-Optics Modulator (AOM)
-<img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/77af682c2d3fe3e8ef1c32c5de5513a498ebd6c6/Acoustco-Optic%20effect.png" width="400">
+<img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/77af682c2d3fe3e8ef1c32c5de5513a498ebd6c6/Acoustco-Optic%20effect.png" width="300">
   
 An AOM uses the acousto-optic effect, which is similar to the Bragg diffraction, to diffract and shift the frequency of the incident light. The acousto-optic effect describes the diffraction of light by acoustic waves. The basis of this effect is a general effect of photoelasticity consisting in the change of the medium permittivity under the action of a mechanical strain. With the acoustco-optic effect, the amount of light diffracted by the sound wave depends on the intensity of the sound. Thus, we use the intensity of the sound to modulate the intensity of the light.
 
