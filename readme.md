@@ -69,9 +69,11 @@ Red Pitaya is an affordable, PC based, multi instrument. It acts as the brain of
 ## Voltage Variable Attenuator (VVA)
 <img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/e3fd1acefe8639c5e60ba01c673978963c45f419/VVA.png" width="400">
 
+Attenuators are transmission line components used to reduce the input power in a system by a predetermined amount. It is operated throughout its entire dynamic range. Different from fixed attenuators, variable attenuators can be controlled to vary the attenuation level of the device with a number of different methods. A voltage varaible attenuator, the VVA, has its attenuation controlled by the voltage. The typical attenuation of the VVA we use, ZX73-2500+ attenuator, is shown in the figure below.
+
 <img src="https://github.com/vivian-liao/laser_intensity_stabilization/blob/f4062dce6361fdb36354567c01299cb552100ea4/Screen%20Shot%202021-04-20%20at%208.15.58%20AM.png" width="500">
 
-The attenuation of our ZX73-2500+ attenuator is non-linear. The nonlinearity would require inputing the control signal at higher voltage to achieve high precision.
+The purpose of using a VVA in our project is to avoid the failure of the feedback loop caused by the overcompensation of the PID program. An overcompensation of the PID program means that the PID overcompensates for every positive errors and creates an even larger error in the negative direction (and vice-versa). With a VVA in the circuit, the overcompensation from the PID feedback will not directly affect the AOM and will not cause serious failure in the stablization. For this purpose, we prefer a relatively flat and linear attenuation curve for our attenuator. From the figure above we can see that the attenuation of our ZX73-2500+ attenuator is non-linear, with the curve relatively linear at control voltage range 0 to 0.5 volts and at high voltage. To achieve high precision, we require the input control signal at higher voltage. We choose 4-12 volts as our range of control voltage.
 
 # Feedback Loop
 ## PID Controller
