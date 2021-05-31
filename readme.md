@@ -10,7 +10,7 @@ We are aiming to stabilize intensity of laser to a fluctuation range of plus-min
 - [Schematics](#Schematics)
 - [Feedback Loop](#Feedback-Loop)
 - [First Iteration](#First-Iteration)
-- [Future Plans](#(Future-Plans)
+- [Future Plans](#Future-Plans)
 - [Contributors](#Contributors)
 
 # Motivation
