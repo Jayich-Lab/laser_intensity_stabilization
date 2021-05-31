@@ -59,9 +59,10 @@ First, the laser beam goes through fiber between two fiber ports. Then the beam 
   
 An AOM uses the acousto-optic effect, which is similar to the Bragg diffraction, to diffract and shift the frequency of the incident light. The acousto-optic effect describes the diffraction of light by acoustic waves. The basis of this effect is a general effect of photoelasticity consisting in the change of the medium permittivity under the action of a mechanical strain. With the acoustco-optic effect, the amount of light diffracted by the sound wave depends on the intensity of the sound. Thus, we use the intensity of the sound to modulate the intensity of the light.
 
-For our project, we choose the first order beam from the AOM, since we are pursuing a maximum dynamic range for the setup. The dynamic range is the ratio between the largest and smallest values of the intensity that can be ouputed by the the AOM. For the zeroth order beam, the intensity can be attenuated from 100 percent to 20 percent, which provides a dynamic range from 100 to 300; while for the first order beam, the intensity can be attenuated from 85 percent to 0 percent, which basically provides a dynamic range from 100 all the way to infinity. Thus, we use the first order beam for our project.
+For our project, we choose the first order beam from the AOM, since we are pursuing a maximum dynamic range for the setup. The dynamic range is the ratio between the largest and smallest values of the intensity that can be ouputed by the the AOM. For the zeroth order beam, the intensity can be attenuated from 100 percent to 20 percent, which provides a dynamic range from 100 to 300; while for the first order beam, the intensity can be attenuated from 85 percent to 0 percent, which basically provides a dynamic range from 100 all the way to infinity. Thus, this is the reason why we use the first order beam for our project.
 
 ## Red Pitaya
+<img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/422ab112dc601abc352fa4d625671b543b93e9ba/slide2-stemlab1.png" width="400">
 
 ## Voltage Variable Attenuator (VVA)
 <img src="https://github.com/vivian-liao/laser_intensity_stabilization/blob/f4062dce6361fdb36354567c01299cb552100ea4/Screen%20Shot%202021-04-20%20at%208.15.58%20AM.png" width="400">
