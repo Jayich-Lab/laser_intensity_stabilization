@@ -55,6 +55,7 @@ First, the laser beam goes through fiber between two fiber ports. Then the beam 
 - The RF gain is then amplified by an op-amp [7] and put back into the AOM to alter the intensity that goes through.
 
 ## Acousto-Optics Modulator (AOM)
+<simg src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/77af682c2d3fe3e8ef1c32c5de5513a498ebd6c6/Acoustco-Optic%20effect.png" width="400">
 An AOM uses the acousto-optic effect, which is similar to the Bragg diffraction, to diffract and shift the frequency of the incident light. The acousto-optic effect describes the diffraction of light by acoustic waves. The basis of this effect is a general effect of photoelasticity consisting in the change of the medium permittivity under the action of a mechanical strain. With the acoustco-optic effect, the amount of light diffracted by the sound wave depends on the intensity of the sound. Thus, we use the intensity of the sound to modulate the intensity of the light.
 
 For our project, we choose the first order beam from the AOM, since we are pursuing a maximum dynamic range for the setup. The dynamic range is the ratio between the largest and smallest values of the intensity that can be ouputed by the the AOM. For the zeroth order beam, the intensity can be attenuated from 100 percent to 20 percent, which provides a dynamic range from 100 to 300; while for the first order beam, the intensity can be attenuated from 85 percent to 0 percent, which basically provides a dynamic range from 100 all the way to infinity. Thus, we use the first order beam for our project.
