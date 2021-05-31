@@ -4,15 +4,22 @@
 
 We are aiming to stabilize intensity of laser to a fluctuation range of plus-minus 1% using Acousto-optic Modulator (AOM) for a long timescale (in the order of days). This stabilization will improve the precision of experiments that use laser beams.
 
+## Table of Contents
+- Motivation
+- List of Components
+- Schematics
+- Feedback Loop
+- First Iteration
+- Future Plans
+- Contributors
+
 # Motivation
-### P 3/2 Life Measurement
+## P 3/2 Life Measurement
 
-### Lifetime Measurement
-
-### Problems
+## Problems
 Laser intensity drifts with time, and the amplitude drift could result in un-precise energy level transition, which affects energy shift induced by ac-stark shift of detuned laser. This unstable laser intensity affects the precision of Ra-226 excitation.
 
-### Goal
+## Goal
 Our goal for this research is to find a laser stabilization method that works for any lasers with any desired intensity. Users are able to manually set the desired intensity. The proportional and integral constants in the PID controller will be able to change on its own corresponding to the input signals.
 
 # List of Components
@@ -26,9 +33,9 @@ Our goal for this research is to find a laser stabilization method that works fo
 
 # Schematics
 ## Feedback Loop Idea
-<img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/04776fa809f75d422d323a4c438cc6fed354564e/feedback%20loop%20logic%20flow.png" width="400">
+<img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/04776fa809f75d422d323a4c438cc6fed354564e/feedback%20loop%20logic%20flow.png" width="500">
 
-The laser beam will be received by a detector, and the signal will be sent to the PID controller. A control signal will then be sent to the laser intensity controller to adjust the laser intensity. The adjusted laser beam will again be received by the detector and teh loop forms to keep the intensity stable.
+The laser beam will be received by a detector, and the signal will be sent to the PID controller. A control signal will then be sent to the laser intensity controller to adjust the laser intensity. The adjusted laser beam will again be received by the detector and teh loop forms to keep the intensity stable. 
 
 ## Experiment Setup Schematics
 <img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/b2fe35d18d52c8cc31f6680785b2dc8ce0ade054/Experiment%20Setup%20with%20number.png" width="800">
@@ -40,7 +47,7 @@ First, the laser beam goes through fiber between two fiber ports. Then the beam 
 - The RF gain is then amplified by an op-amp [7] and put back into the AOM to alter the intensity that goes through.
 
 ## Acousto-Optics Modulator (AOM)
-It uses acousto-optic effect (Briggs diffraction) to diffract and shift the frequency of the light, and the amount of light diffracted by the sound wave depends on the intensity of the sound. Thus, we use the intensity of the sound to modulate the intensity of the light. For our project, we use the first order beam.
+An AOM uses acousto-optic effect (Briggs diffraction) to diffract and shift the frequency of the light, and the amount of light diffracted by the sound wave depends on the intensity of the sound. Thus, we use the intensity of the sound to modulate the intensity of the light. For our project, we use the first order beam.
 
 ## Red Pitaya
 
@@ -56,3 +63,6 @@ The attenuation of our ZX73-2500+ attenuator is non-linear. The nonlinearity wou
 
 # Future Plans
 For P 3/2 life measurement, we need a pulsed feedback that turns on and off for millliseconds. Currently we use double AOM CW feedback as the setup; however, there are two issues to be solved. First, the double AOM CW feedback has an intensity delay, which causes failure in the PID control; second, the paused feedback must be run from DACO, ?????. A possible solution for the issues may be to use Arduino as the PID controller with the same experimental setup.
+
+# Contributors
+This project is made for CS 15C class by Chaoshe Zhang, Sam Gebretsadkan, Vivian Liao and Rei Landsberger.
