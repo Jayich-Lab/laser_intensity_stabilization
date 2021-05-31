@@ -41,12 +41,12 @@ Our goal for this research is to find a laser stabilization method that works fo
 
 # Schematics
 ## Feedback Loop Idea
-<img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/04776fa809f75d422d323a4c438cc6fed354564e/feedback%20loop%20logic%20flow.png" width="500">
+<img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/04776fa809f75d422d323a4c438cc6fed354564e/feedback%20loop%20logic%20flow.png" width="600">
 
 The laser beam will be received by a detector, and the signal will be sent to the PID controller. A control signal will then be sent to the laser intensity controller to adjust the laser intensity. The adjusted laser beam will again be received by the detector and teh loop forms to keep the intensity stable. 
 
 ## Experiment Setup Schematics
-<img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/b2fe35d18d52c8cc31f6680785b2dc8ce0ade054/Experiment%20Setup%20with%20number.png" width="800">
+<img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/b2fe35d18d52c8cc31f6680785b2dc8ce0ade054/Experiment%20Setup%20with%20number.png" width="1000">
 
 First, the laser beam goes through fiber between two fiber ports. Then the beam goes through Acousto-Optic Modulator (AOM) [1], which acts as the controller of the laser intensity. 
 - 10 percent of the power is recieved by the photodiode [2], and a divider [3] divides the power signal into DC and AC. The divided signals are the live signals that will be analyzed in the PID program.
@@ -64,8 +64,10 @@ For our project, we choose the first order beam from the AOM, since we are pursu
 ## Red Pitaya
 <img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/772316f9d438e699e2c2b01aafd8a261f7e7b2d2/RedPitaya_STEMLab_FPGA_v1.1_frontview.jpg" width="400">
 
+Red Pitaya is an affordable, PC based, multi instrument. It acts as the brain of our project, which takes up the role as the PID controller for the feedback loop.
+
 ## Voltage Variable Attenuator (VVA)
-<img src="https://github.com/vivian-liao/laser_intensity_stabilization/blob/f4062dce6361fdb36354567c01299cb552100ea4/Screen%20Shot%202021-04-20%20at%208.15.58%20AM.png" width="400">
+<img src="https://github.com/vivian-liao/laser_intensity_stabilization/blob/f4062dce6361fdb36354567c01299cb552100ea4/Screen%20Shot%202021-04-20%20at%208.15.58%20AM.png" width="500">
 
 The attenuation of our ZX73-2500+ attenuator is non-linear. The nonlinearity would require inputing the control signal at higher voltage to achieve high precision.
 
