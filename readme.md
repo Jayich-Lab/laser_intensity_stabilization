@@ -5,7 +5,7 @@
 We are aiming to stabilize intensity of laser to a fluctuation range of plus-minus 1% using Acousto-optic Modulator (AOM) for a long timescale (in the order of days). This stabilization will improve the precision of experiments that use laser beams.
 
 ## Table of Contents
-- [Motivation](#anchors-in-markdown)
+- [Motivation](#Motivation)
 - List of Components
 - Schematics
 - Feedback Loop
