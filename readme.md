@@ -73,7 +73,7 @@ For our project, we choose the first order beam from the AOM. The difference bet
 <img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/772316f9d438e699e2c2b01aafd8a261f7e7b2d2/RedPitaya_STEMLab_FPGA_v1.1_frontview.jpg" width="400">
 </div>
 <br>
-Red Pitaya is an affordable, PC based, multi instrument. It acts as the brain of our project, which takes up the role of PID controller for the feedback loop (Discussed in [Feedback Loop Section](#Feedback-Loop). Signal came from the photodiode is received by the DAC protal of the Red Pitaya, and after the PID program an output signal will be sent out from the ADC protal to the voltage variable attenuator (VVA).
+Red Pitaya is an affordable, PC based, multi instrument. It acts as the brain of our project, which takes up the role of PID controller for the feedback loop (Discussed in [Feedback Loop Section](#Feedback-Loop)). Signal came from the photodiode is received by the DAC protal of the Red Pitaya, and after the PID program an output signal will be sent out from the ADC protal to the voltage variable attenuator (VVA).
 
 ## Voltage Variable Attenuator (VVA)
 <div align="center">
