@@ -78,29 +78,42 @@ Red Pitaya is an affordable, PC based, multi instrument. It acts as the brain of
 ## Voltage Variable Attenuator (VVA)
 <div align="center">
 <img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/e3fd1acefe8639c5e60ba01c673978963c45f419/VVA.png" width="400">
-
-Attenuators are transmission line components used to reduce the input power in a system by a predetermined amount. It is operated throughout its entire dynamic range. Different from fixed attenuators, variable attenuators can be controlled to vary the attenuation level of the device with a number of different methods. A voltage varaible attenuator, the VVA, has its attenuation controlled by the voltage. The typical attenuation of the VVA we use, ZX73-2500+ attenuator, is shown in the figure below.
-
-<img src="https://github.com/vivian-liao/laser_intensity_stabilization/blob/f4062dce6361fdb36354567c01299cb552100ea4/Screen%20Shot%202021-04-20%20at%208.15.58%20AM.png" width="500">
-
-The purpose of using a VVA in our project is to diminish the failure of the feedback loop caused by the overcompensation of the PID program. An overcompensation of the PID program means that the PID overcompensates for every positive errors and creates an even larger error in the negative direction (and vice-versa). With a VVA in the circuit, the overcompensation from the PID feedback will not directly affect the AOM and will not cause serious failure in the stabilization. For this purpose, we prefer a relatively flat and linear attenuation curve for our attenuator. From the figure above we can see that the attenuation of our ZX73-2500+ attenuator is non-linear, with the curve relatively linear at control voltage range 0 to 0.5 volts and at high voltage. To achieve high precision, we require the input control signal at higher voltage. We choose 4-12 volts as our range of control voltage.
 </div>
   
+Attenuators are transmission line components used to reduce the input power in a system by a predetermined amount. It is operated throughout its entire dynamic range. Different from fixed attenuators, variable attenuators can be controlled to vary the attenuation level of the device with a number of different methods. A voltage varaible attenuator, the VVA, has its attenuation controlled by the voltage. The typical attenuation of the VVA we use, ZX73-2500+ attenuator, is shown in the figure below.
+
+<div align="center">
+<img src="https://github.com/vivian-liao/laser_intensity_stabilization/blob/f4062dce6361fdb36354567c01299cb552100ea4/Screen%20Shot%202021-04-20%20at%208.15.58%20AM.png" width="500">
+</div>
+
+The purpose of using a VVA in our project is to diminish the failure of the feedback loop caused by the overcompensation of the PID program. An overcompensation of the PID program means that the PID overcompensates for every positive errors and creates an even larger error in the negative direction (and vice-versa). With a VVA in the circuit, the overcompensation from the PID feedback will not directly affect the AOM and will not cause serious failure in the stabilization. For this purpose, we prefer a relatively flat and linear attenuation curve for our attenuator. From the figure above we can see that the attenuation of our ZX73-2500+ attenuator is non-linear, with the curve relatively linear at control voltage range 0 to 0.5 volts and at high voltage. To achieve high precision, we require the input control signal at higher voltage. We choose 4-12 volts as our range of control voltage.
+
 # Feedback Loop
 ## PID Controller
+<div align="center">
 <img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/e3fd1acefe8639c5e60ba01c673978963c45f419/PID%20controller.png" width="600">
+</div>
 
 ## Continuous (CW) Feedback
+<div align="center">
 <img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/e3fd1acefe8639c5e60ba01c673978963c45f419/pulsed%20feedback.png" width="600">
+</div>
 
 ## Pulsed Feedback
+<div align="center">
 <img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/e3fd1acefe8639c5e60ba01c673978963c45f419/pulsed%20feedback%20fig.png" width="600">
+</div>
 
 # Iterations
 ## First Iteration
+<div align="center">
 <img src ="https://user-images.githubusercontent.com/77765489/119746311-0f153100-be45-11eb-9ecc-4c6befbecd9d.png" width = "800">
+</div>
 
 ## Second Iteration
+<div align="center">
+<img src =" " width = "800">
+</div>
 
 # Future Plans
 For P 3/2 life measurement, we need a pulsed feedback that turns on and off for millliseconds. Currently we use double AOM CW feedback as the setup; however, there are two issues to be solved. First, the double AOM CW feedback has an intensity delay, which causes failure in the PID control; second, the paused feedback must be run from DACO, ?????. A possible solution for the issues may be to use Arduino as the PID controller with the same experimental setup.
