@@ -11,7 +11,6 @@ We are aiming to stabilize intensity of laser to a fluctuation range of plus-min
   - [Goal](#Goal)
 - [List of Components](#List-of-Components)
 - [Schematics](#Schematics)
-  - [Feedback Loop Idea](#Feedback-Loop-Idea)
   - [Experiment Setup Schematics](#Experiment-Setup-Schematics)
   - [Acousto-Optics Modulator (AOM)](#Acousto-Optics-Modulator-AOM)
   - [Red Pitaya](#Red-Pitaya)
@@ -45,13 +44,6 @@ Our goal for this research is to find a laser stabilization method that works fo
 - RF Amplifier: [ZHL-1-2W+](https://www.minicircuits.com/WebStore/dashboard.html?model=ZHL-1-2W%2B)
 
 # Schematics
-## Feedback Loop Idea
-<div align="center">
-<img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/04776fa809f75d422d323a4c438cc6fed354564e/feedback%20loop%20logic%20flow.png" width="600">
-</div>
-
-The laser beam will be received by a detector, and the signal will be sent to the PID controller. A control signal will then be sent to the laser intensity controller to adjust the laser intensity. The adjusted laser beam will again be received by the detector and teh loop forms to keep the intensity stable. 
-
 ## Experiment Setup Schematics
 <div align="center">
 <img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/b2fe35d18d52c8cc31f6680785b2dc8ce0ade054/Experiment%20Setup%20with%20number.png" width="1000">
