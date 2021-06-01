@@ -56,7 +56,7 @@ The laser beam will be received by a detector, and the signal will be sent to th
 <div align="center">
 <img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/b2fe35d18d52c8cc31f6680785b2dc8ce0ade054/Experiment%20Setup%20with%20number.png" width="1000">
 </div>
-<br>
+
 First, the laser beam goes through the fiber and the two fiber ports, and then it goes through Acousto-Optic Modulator ([AOM](#Acousto-Optics-Modulator-AOM)) [1], which diffracts the light to different intensity. Next, 10 percent of the power is recieved by the photodiode [2], and a divider [3] divides the power signal into DC and AC. The divided signals are the live signals that will be analyzed in the PID program. A PID program is built in [Red Pitaya](#Red-Pitaya) [4]. It collects signals from the photodiode and compare it to a setpoint voltage, which we are aiming for the laser to be stabilized at, to create an error signal. The Red Pitaya will then return this DC gain error signal and send it to a voltage variable attenuator ([VVA](#Voltage-Variable-Attenuator-VVA)) [5]. The attenuator receives a DC gain signal as well as an RF reference signal, and it will output an attenuate RF gain with attenuation determined by the input control voltage. The RF gain is then amplified by an op-amp [7] and put back into the AOM to alter the intensity that goes through it.
 
 ## Acousto-Optics Modulator (AOM)
