@@ -46,28 +46,37 @@ Our goal for this research is to find a laser stabilization method that works fo
 
 # Schematics
 ## Feedback Loop Idea
+<div align="center">
 <img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/04776fa809f75d422d323a4c438cc6fed354564e/feedback%20loop%20logic%20flow.png" width="600">
+</div>
 
 The laser beam will be received by a detector, and the signal will be sent to the PID controller. A control signal will then be sent to the laser intensity controller to adjust the laser intensity. The adjusted laser beam will again be received by the detector and teh loop forms to keep the intensity stable. 
 
 ## Experiment Setup Schematics
+<div align="center">
 <img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/b2fe35d18d52c8cc31f6680785b2dc8ce0ade054/Experiment%20Setup%20with%20number.png" width="1000">
+</div>
 
 First, the laser beam goes through the fiber and the two fiber ports, and then it goes through Acousto-Optic Modulator ([AOM](#Acousto-Optics-Modulator-AOM)) [1], which diffracts the light to different intensity. Next, 10 percent of the power is recieved by the photodiode [2], and a divider [3] divides the power signal into DC and AC. The divided signals are the live signals that will be analyzed in the PID program. A PID program is built in [Red Pitaya](#Red-Pitaya) [4]. It collects signals from the photodiode and compare it to a setpoint voltage, which we are aiming for the laser to be stabilized at, to create an error signal. The Red Pitaya will then return this DC gain error signal and send it to a voltage variable attenuator ([VVA](#Voltage-Variable-Attenuator-VVA)) [5]. The attenuator receives a DC gain signal as well as an RF reference signal, and it will output an attenuate RF gain with attenuation determined by the input control voltage. The RF gain is then amplified by an op-amp [7] and put back into the AOM to alter the intensity that goes through it.
 
 ## Acousto-Optics Modulator (AOM)
+<div align="center">
 <img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/77af682c2d3fe3e8ef1c32c5de5513a498ebd6c6/Acoustco-Optic%20effect.png" width="300">
+</div>
   
 An AOM uses the acousto-optic effect, which is similar to the Bragg diffraction, to diffract and shift the frequency of the incident light. The acousto-optic effect describes the diffraction of light by acoustic waves. The basis of this effect is a general effect of photoelasticity consisting in the change of the medium permittivity under the action of a mechanical strain. With the acousto-optic effect, the amount of light diffracted by the sound wave depends on the intensity of the sound. Thus, we use the intensity of the sound to modulate the intensity of the light.
 
 For our project, we choose the first order beam from the AOM. The difference between each order beam is that they have different dynamic range. The dynamic range is the ratio between the largest and smallest values of the intensity that can be ouputted by the the AOM. For the zeroth order beam, the intensity can be attenuated from 100 percent to 20 percent, which provides a dynamic range from 100 to 300; while for the first order beam, the intensity can be attenuated from 85 percent to 0 percent, which basically provides a dynamic range from 100 all the way to infinity. Thus, we choose the first order beam for our project to have a larger dynamic range.
 
 ## Red Pitaya
+<div align="center">
 <img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/772316f9d438e699e2c2b01aafd8a261f7e7b2d2/RedPitaya_STEMLab_FPGA_v1.1_frontview.jpg" width="400">
-
+</div>
+  
 Red Pitaya is an affordable, PC based, multi instrument. It acts as the brain of our project, which takes up the role of PID controller for the feedback loop (Discussed in [Feedback Loop Section](#Feedback-Loop). Signal came from the photodiode is received by the DAC protal of the Red Pitaya, and after the PID program an output signal will be sent out from the ADC protal to the voltage variable attenuator (VVA).
 
 ## Voltage Variable Attenuator (VVA)
+<div align="center">
 <img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/e3fd1acefe8639c5e60ba01c673978963c45f419/VVA.png" width="400">
 
 Attenuators are transmission line components used to reduce the input power in a system by a predetermined amount. It is operated throughout its entire dynamic range. Different from fixed attenuators, variable attenuators can be controlled to vary the attenuation level of the device with a number of different methods. A voltage varaible attenuator, the VVA, has its attenuation controlled by the voltage. The typical attenuation of the VVA we use, ZX73-2500+ attenuator, is shown in the figure below.
@@ -75,7 +84,8 @@ Attenuators are transmission line components used to reduce the input power in a
 <img src="https://github.com/vivian-liao/laser_intensity_stabilization/blob/f4062dce6361fdb36354567c01299cb552100ea4/Screen%20Shot%202021-04-20%20at%208.15.58%20AM.png" width="500">
 
 The purpose of using a VVA in our project is to diminish the failure of the feedback loop caused by the overcompensation of the PID program. An overcompensation of the PID program means that the PID overcompensates for every positive errors and creates an even larger error in the negative direction (and vice-versa). With a VVA in the circuit, the overcompensation from the PID feedback will not directly affect the AOM and will not cause serious failure in the stabilization. For this purpose, we prefer a relatively flat and linear attenuation curve for our attenuator. From the figure above we can see that the attenuation of our ZX73-2500+ attenuator is non-linear, with the curve relatively linear at control voltage range 0 to 0.5 volts and at high voltage. To achieve high precision, we require the input control signal at higher voltage. We choose 4-12 volts as our range of control voltage.
-
+</div>
+  
 # Feedback Loop
 ## PID Controller
 <img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/e3fd1acefe8639c5e60ba01c673978963c45f419/PID%20controller.png" width="600">
