@@ -20,7 +20,9 @@ We are aiming to stabilize intensity of laser to a fluctuation range of plus-min
   - [PID Controller](#PID-Controller)
   - [Continuous (CW) Feedback](#Continuous-CW-Feedback)
   - [Pulsed Feedback](#Pulsed-Feedback)
-- [First Iteration](#First-Iteration)
+- [Iterations](#Iterations)
+  - [First Iteration](#First-Iteration)
+  - [Second Iteration](#Second-Iteration)
 - [Future Plans](#Future-Plans)
 - [Contributors](#Contributors)
 
@@ -88,8 +90,11 @@ The purpose of using a VVA in our project is to diminish the failure of the feed
 ## Pulsed Feedback
 <img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/e3fd1acefe8639c5e60ba01c673978963c45f419/pulsed%20feedback%20fig.png" width="600">
 
-# First Iteration
+# Iterations
+## First Iteration
 <img src ="https://user-images.githubusercontent.com/77765489/119746311-0f153100-be45-11eb-9ecc-4c6befbecd9d.png" width = "800">
+
+## Second Iteration
 
 # Future Plans
 For P 3/2 life measurement, we need a pulsed feedback that turns on and off for millliseconds. Currently we use double AOM CW feedback as the setup; however, there are two issues to be solved. First, the double AOM CW feedback has an intensity delay, which causes failure in the PID control; second, the paused feedback must be run from DACO, ?????. A possible solution for the issues may be to use Arduino as the PID controller with the same experimental setup.
