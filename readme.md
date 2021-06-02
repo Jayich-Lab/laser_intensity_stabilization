@@ -20,8 +20,8 @@ We are aiming to stabilize intensity of laser to a fluctuation range of plus-min
   - [Continuous (CW) Feedback](#Continuous-CW-Feedback)
   - [Pulsed Feedback](#Pulsed-Feedback)
 - [Iterations](#Iterations)
-  - [First Iteration](#First-Iteration)
-  - [Second Iteration](#Second-Iteration)
+  - [PI Stabilization](#PI-Stabilization)
+  - [I Stabilization](#I-Stabilization)
 - [Future Plans](#Future-Plans)
 - [Contributors](#Contributors)
 
@@ -99,12 +99,12 @@ The purpose of using a VVA in our project is to diminish the failure of the feed
 
 
 # Iterations
-## First Iteration
+## PI Stabilization
 <div align="center">
 <img src ="https://user-images.githubusercontent.com/77765489/119746311-0f153100-be45-11eb-9ecc-4c6befbecd9d.png" width = "800">
 </div>
 
-## Second Iteration
+## I Stabilization
 <div align="center">
 <img src =" " width = "800">
 </div>
