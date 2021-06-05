@@ -119,6 +119,11 @@ We created pseudo pulsed feedback, but what does pulsed feedback look like? Unli
 <img src ="https://user-images.githubusercontent.com/77765489/119746311-0f153100-be45-11eb-9ecc-4c6befbecd9d.png" width = "800">
 </div>
 
+
+<div align="center">
+<img src ="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/7792d7656eb247637dfc02c92de9fb8e0821be40/zoom%20in.png" width = "500">
+</div>
+
 ## I Stabilization
 <div align="center">
 <img src ="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/e600aa16eec254489eed7aad6a38697675a1e220/I%20stabilization.png" width = "800">
