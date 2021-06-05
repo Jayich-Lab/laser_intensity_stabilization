@@ -98,12 +98,12 @@ From the figure above, we can see that the attenuation of our ZX73-2500+ attenua
 <img src="https://user-images.githubusercontent.com/77765489/120875179-66ab4f00-c55f-11eb-840d-cb8d25912a90.png" width="600">
 </div>
 
-Red Pitaya is remotely controlled using a client on a computer via an internal network. After receiving the signal, the pitaya runs a python script (discussed in [Code section](#Code)), compares the input voltage to the setpoint voltage, and applies a control signal, C, which depends on the proportional, integral and differential terms of the error signal. The relationship can be seen in the equation above. We neglected the differential term for our setup as we weren’t concerned with stabilizing at high frequency (laser fluctuations tended to be low frequency). The control signal from the pitaya goes through an operational amplifier which increases the control range from ± 1 volt to 4 and 12 volts. The [Voltage Variable Attenuator (VVA) section](#Voltage-Variable-Attenuator-VVA) explains why we want to be in the 4 -12 voltage range. The control signal was also sent to an oscilloscope at the same time. The majority of the data was taken on an oscilloscope. The data from the oscilloscope was read by a server on the computer and sent to the red pitaya. The computer (server and client) are constantly communicating with the red pitaya during  the feedback loop. 
+Red Pitaya is remotely controlled using a client on a computer via an internal network. After receiving the signal, the pitaya runs a python script (discussed in [Code](#Code)) section, compares the input voltage to the setpoint voltage, and applies a control signal, C, which depends on the proportional, integral and differential terms of the error signal. The relationship can be seen in the equation above. We neglected the differential term for our setup as we weren’t concerned with stabilizing at high frequency (laser fluctuations tended to be low frequency). The control signal from the pitaya goes through an operational amplifier which increases the control range from ± 1 volt to 4 and 12 volts. The [Voltage Variable Attenuator (VVA)](#Voltage-Variable-Attenuator-VVA) section explains why we want to be in the 4 -12 voltage range. The control signal was also sent to an oscilloscope at the same time. The majority of the data was taken on an oscilloscope. The data from the oscilloscope was read by a server on the computer and sent to the red pitaya. The computer (server and client) are constantly communicating with the red pitaya during  the feedback loop. 
  
 
 ## Code
 The programming was mainly done on the red pitaya using python and the PyRPL module, which has python defined classes for controlling the pitaya outputs and inputs. The PyRPL code was written onto a server, and a client was then made using that server. 
-There was also a simpler script made for an independent laser intensity stabilization setup using an Arduino due. The code is above under “PI_Stabilization.ino”. The Arduino presents versatility as it uses c + +, a widely accessible programming language. On the other hand, the red pitaya can either be programmed using the limited PYRPL module or the native language of the pitaya, Verilog, which is less accessible. 
+There was also a simpler script made for an independent laser intensity stabilization setup using an Arduino due. The code is above under “PI_Stabilization.ino”. The Arduino presents versatility as it uses C++, a widely accessible programming language. On the other hand, the red pitaya can either be programmed using the limited PYRPL module or the native language of the pitaya, Verilog, which is less accessible. 
 Either the Arduino or the pitaya is sufficient for stabilization. Still, when it comes to pulsed feedback (discussed shortly), the Arduino is a better choice as C + + is easier to work with than Verilog. 
 
 
@@ -111,6 +111,7 @@ Either the Arduino or the pitaya is sufficient for stabilization. Still, when it
 <div align="center">
 <img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/e3fd1acefe8639c5e60ba01c673978963c45f419/pulsed%20feedback.png" width="600">
 </div>
+
 We need to identify a clear distinction between continuous and pulsed feedback. In this experiment, we are applying continuous waveform (CW) feedback. We are continuously reading data and stabilizing it over time. The picture above illustrates a summary of our CW feedback in a rectangle on the right. Generally, in ion trap experiments, laser beams are sent to the ion trap in pulse sequences (on the order of microseconds). We can create a stabilized pulsing laser by placing a second AOM after the laser is stabilized. The second AOM will receive a signal that turns it “on” or “off,” This way, we have a pseudo pulsed feedback setup. 
 
 ## Pulsed Feedback
@@ -125,11 +126,16 @@ We created pseudo pulsed feedback, but what does pulsed feedback look like? Unli
 <div align="center">
 <img src ="https://user-images.githubusercontent.com/77765489/119746311-0f153100-be45-11eb-9ecc-4c6befbecd9d.png" width = "800">
 </div>
+<br>
+
 Laser intensity was stabilized to ±0.2%, which surpasses our goal of ± 1%. The blue plot is the signal received by the photodiode, the orange curve is the control signal output by the red pitaya, and the green line is the stabilized signal.  We took the data in 8 hours and found no drifts in the stabilization, which indicates that our setup is robust since it maintains the same intensity while environmental parameters such as temperature change. Using only the P and I terms, we were able to minimize the initial noise by a factor of 200. 
+<br>
 
 <div align="center">
 <img src ="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/7792d7656eb247637dfc02c92de9fb8e0821be40/zoom%20in.png" width = "500">
 </div>
+<br>
+
 Looking more closely at the stabilized signal, we can see no long-term drift; the signal only oscillates at high frequency. This high-frequency noise can be accounted for by the internal noise of the photodiode. The ±0.2% fluctuation in our data was partly correlated to the photodiode uncertainty; the rest of the noise comes from the control signal output by the pitaya. The above data set was preliminary data and demonstrated the sufficiency of our stabilization for the P 3/2 life measurement. 
 
 ## I Stabilization
