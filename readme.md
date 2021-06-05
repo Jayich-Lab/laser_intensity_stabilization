@@ -118,6 +118,10 @@ We created pseudo pulsed feedback, but what does pulsed feedback look like? Unli
 <div align="center">
 <img src ="https://user-images.githubusercontent.com/77765489/119746311-0f153100-be45-11eb-9ecc-4c6befbecd9d.png" width = "800">
 </div>
+<div align="center">
+<img src ="https://user-images.githubusercontent.com/77765489/120882078-52c91280-c58a-11eb-8ab5-931c2a776f77.png" width = "800">
+</div>
+
 
 ## I Stabilization
 <div align="center">
