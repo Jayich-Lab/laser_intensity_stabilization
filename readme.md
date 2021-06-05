@@ -1,6 +1,6 @@
 # Laser Intensity Stabilization
 <div align="center">
-<img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/a74a1729dd4d4fad07957e3e5872ce33a577457c/real%20setup.jpg" width="900">
+<img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/a74a1729dd4d4fad07957e3e5872ce33a577457c/real%20setup.jpg" width="1000">
 </div>
 
 [Development Notebook](https://docs.google.com/document/d/1RtXi4E6TiI_Ld4MZSRgFrHrQVlKGbRzDl3qZmrDYwTk/edit#)
@@ -134,4 +134,4 @@ For P 3/2 life measurement, we need a pulsed feedback that turns on and off for 
 **_A possible solution for the issues may be to use [Arduino DUE](https://store.arduino.cc/usa/due) as the PID controller with the same experimental setup._**  This will bypass computer-to-RedPitaya pulsing and instead allow for independent pulse feedback.
 
 # Contributors
-This project is made for CS 15C class by Chaoshe Zhang, Sam Gebretsadkan, Vivian Liao and Rei Landsberger.
+This project is made for CS 15C class by Chaoshen Zhang, Sam Gebretsadkan, Vivian Liao and Rei Landsberger.
