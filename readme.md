@@ -31,7 +31,7 @@ We are aiming to stabilize intensity of laser to a fluctuation range of plus-min
 # Motivation
 ## P 3/2 Life Measurement
 <div align="center">
-<img src="https://user-images.githubusercontent.com/77765489/120882021-f534c600-c589-11eb-8d38-a60a9130eace.png" width="200">
+<img src="https://user-images.githubusercontent.com/77765489/120882021-f534c600-c589-11eb-8d38-a60a9130eace.png" width="400">
 </div>
 
 ## Problems
