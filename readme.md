@@ -116,7 +116,7 @@ The purpose of using a VVA in our project is to diminish the failure of the feed
 
 Using BIFROST laser light (20% intensity fluctuation without stablilization), we stablilized the laser to average within $\pm$ 0.1% of our setpoint intensity. Extreme peakks during stablization still stayed within $\pm$ 0.3% of setpoint.  Long term drift of intensity from BIFROST is no longer a problem with this intensity stabilizer. Most recent and important data from the Intensity Stabilization project is this graph above
 
-###Observations:
+### Observations:
 1. It was found that **omitting** the proportional term for PID control was more stable than including proportional control.
 2. The lower the control voltage (shown in the bottom graph as it slopes downward), the less stablity we get due to the VVA response curve at different voltages.
 
