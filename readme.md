@@ -119,6 +119,7 @@ We need to identify a clear distinction between continuous and pulsed feedback. 
 <img src="https://user-images.githubusercontent.com/77765489/120880065-cfed8b00-c57c-11eb-9de1-02c7f2a7fd75.png" width="600">
 </div>
 We created pseudo pulsed feedback, but what does pulsed feedback look like? Unlike CW feedback, in pulsed feedback, we only take data on short intervals (µs). The above graph models a pulse sequence where the laser is on for µs and off for ms. During the period the laser is on, a microcontroller collects data and generates an error signal E1. When the laser is off, the microcontroller outputs a constant dc offset. After the laser is turned on again, a fixed dc voltage (red line) is outputted based on the error signal E1. This process continues for all pulses.
+<br>
 *Note only CW feedback was used in this project 
 
 # Iterations
@@ -129,7 +130,7 @@ We created pseudo pulsed feedback, but what does pulsed feedback look like? Unli
 <br>
 
 Laser intensity was stabilized to ± 0.2%, which surpasses our goal of ± 1%. The blue plot is the signal received by the photodiode, the orange curve is the control signal output by the red pitaya, and the green line is the stabilized signal.  We took the data in 8 hours and found no drifts in the stabilization, which indicates that our setup is robust since it maintains the same intensity while environmental parameters such as temperature change. Using only the P and I terms, we were able to minimize the initial noise by a factor of 200. 
-<br>
+<br><br>
 
 <div align="center">
 <img src ="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/7792d7656eb247637dfc02c92de9fb8e0821be40/zoom%20in.png" width = "500">
