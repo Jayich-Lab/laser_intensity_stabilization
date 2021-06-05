@@ -83,10 +83,6 @@ The purpose of using a VVA in our project is to diminish the failure of the feed
 # Feedback Loop
 ## PID Controller
 <div align="center">
-<img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/e3fd1acefe8639c5e60ba01c673978963c45f419/PID%20controller.png" width="600">
-</div>
-
-<div align="center">
 <img src="https://user-images.githubusercontent.com/77765489/120875179-66ab4f00-c55f-11eb-840d-cb8d25912a90.png" width="600">
 </div>
 
