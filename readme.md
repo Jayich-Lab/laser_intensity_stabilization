@@ -20,6 +20,7 @@ We are aiming to stabilize intensity of laser to a fluctuation range of plus-min
   - [Voltage Variable Attenuator (VVA)](#Voltag-Variable-Attenuator-VVA)
 - [Feedback Loop](#Feedback-Loop)
   - [PID Controller](#PID-Controller)
+  - [Code](#Code)
   - [Continuous (CW) Feedback](#Continuous-CW-Feedback)
   - [Pulsed Feedback](#Pulsed-Feedback)
 - [Iterations](#Iterations)
@@ -94,8 +95,9 @@ The purpose of using a VVA in our project is to diminish the failure of the feed
 <div align="center">
 <img src="https://user-images.githubusercontent.com/77765489/120875179-66ab4f00-c55f-11eb-840d-cb8d25912a90.png" width="600">
 </div>
-To summarize, the laser goes into the photodiode, and the photodiode generates a voltage signal in the range of +/- 4 volts. The red pitaya can only take a voltage from -1 to 1 volt, so we place a ¼ voltage divider in front of the pitaya. The red pitaya is remotely controlled using a client on a computer via an internal network. 
-After receiving the signal, the pitaya runs a python script (discussed in the next section), compares the input voltage to the setpoint voltage, and applies a control signal, C, which depends on the proportional integral and differential terms of the error signal. The relationship can be seen in the equation above. We neglected the differential term for our setup as we weren’t concerned with stabilizing at high frequency (laser fluctuations tended to be low frequency). The control signal from the pitaya goes through an operational amplifier which increases the control range from +/- 1 volt to 4 and 12 volts. The Voltage Variable Attenuator (VVA) section explains why we want to be in the 4 -12 voltage range. The control signal was also sent to an oscilloscope at the same time. The majority of the data was taken on an oscilloscope. The data from the oscilloscope was read by a server on the computer and sent to the red pitaya. The computer (server and client) are constantly communicating with the red pitaya during  the feedback loop. 
+To summarize, the laser goes into the photodiode, and the photodiode generates a voltage signal in the range of ± 4 volts. The red pitaya can only take a voltage from -1 to 1 volt, so we place a ¼ voltage divider in front of the pitaya. The red pitaya is remotely controlled using a client on a computer via an internal network. 
+After receiving the signal, the pitaya runs a python script (discussed in the next section), compares the input voltage to the setpoint voltage, and applies a control signal, C, which depends on the proportional integral and differential terms of the error signal. The relationship can be seen in the equation above. We neglected the differential term for our setup as we weren’t concerned with stabilizing at high frequency (laser fluctuations tended to be low frequency). The control signal from the pitaya goes through an operational amplifier which increases the control range from ± 1 volt to 4 and 12 volts. The Voltage Variable Attenuator (VVA) section explains why we want to be in the 4 -12 voltage range. The control signal was also sent to an oscilloscope at the same time. The majority of the data was taken on an oscilloscope. The data from the oscilloscope was read by a server on the computer and sent to the red pitaya. The computer (server and client) are constantly communicating with the red pitaya during  the feedback loop. 
+ 
 
 ## Code
 The programming was mainly done on the red pitaya using python and the PyRPL module, which has python defined classes for controlling the pitaya outputs and inputs. The PyRPL code was written onto a server, and a client was then made using that server. 
