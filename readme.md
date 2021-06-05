@@ -155,8 +155,8 @@ Observations:
 <img src ="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/b05f487094b440fb5e0732c47b2f48b5b8810244/power.jpg" width = "800">
 </div>
 
-There are some issues with our current pseudo pulsed feedback setup. 1) We can’t stabilize the laser intensity right before the beam reaches the ion trap; it has to go through different optics before reaching the trap, which means it will incur some extra noise that we can’t currently stabilize. 2) The second AOM (the one receiving pulsed signal) changes how fast it can turn on and off based on the environmental temperature. 
-Potential solution: utilize an [Arduino DUE](https://store.arduino.cc/usa/due) to make independent pulsed feedback. This would eliminate the second AOM and allow us to stabilize the laser light right before it reaches the ion trap. 
+There are some issues with our current pseudo pulsed feedback setup. 1) We can’t stabilize the laser intensity right before the beam reaches the ion trap; it has to go through different optics before reaching the trap, which means it will incur some extra noise that we can’t currently stabilize. 2) The second AOM (the one receiving pulsed signal) changes how fast it can turn on and off based on the environmental temperature. 3) Our current setup, as you can see from the picture above, uses too many separate power supplies, which makes it difficult to set up and apply to any measurement. 
+Potential solution: utilize an [Arduino DUE](https://store.arduino.cc/usa/due) to make independent pulsed feedback. This would eliminate the second AOM and allow us to stabilize the laser light right before it reaches the ion trap.We would also be able to make an integrated power supply, making our stabilization more compact and robust. 
 
 
 # Contributors
