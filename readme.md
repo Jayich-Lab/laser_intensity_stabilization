@@ -113,10 +113,17 @@ The purpose of using a VVA in our project is to diminish the failure of the feed
 </div>
 **Most recent and important data from the Intensity Stabilization project is this graph above**
 
-Using BIFROST laser light (without stablilization had 20% intensity fluctuation), we stablilized the laser to average within $\pm$ 0.1% of our setpoint intensity.  
+Using BIFROST laser light (20% intensity fluctuation without stablilization), we stablilized the laser to average within $\pm$ 0.1% of our setpoint intensity. Extreme peakks during stablization still stayed within $\pm$ 0.3% of setpoint.  Long term drift of intensity from BIFROST is no longer a problem with this intensity stabilizer.
+
+###Observations:
+1. It was found that **omitting** the proportional term for PID control was more stable than including proportional control.
+2. The lower the control voltage (shown in the bottom graph as it slopes downward), the less stablity we get due to the VVA response curve at different voltages.
+
 
 # Future Plans
-For P 3/2 life measurement, we need a pulsed feedback that turns on and off for millliseconds. Currently we use double AOM CW feedback as the setup; however, there are two issues to be solved. First, the double AOM CW feedback has an intensity delay, which causes failure in the PID control; second, the paused feedback must be run from DACO, ?????. A possible solution for the issues may be to use Arduino as the PID controller with the same experimental setup.
+For P 3/2 life measurement, we need a pulsed feedback that turns on and off for millliseconds. Currently we use double AOM CW feedback as the setup; however, there are a few issues to be solved. First, the double AOM CW feedback has an intensity delay, which causes failure in the PID control; second, the paused feedback must be run from DACO. In addition to this, the second AOM's thermal fluctuations will be slightly different from the first AOM, causing de-optimization of our stablility.
+
+**A possible solution for the issues may be to use [Arduino DUE] (https://store.arduino.cc/usa/due) as the PID controller with the same experimental setup.**  This will bypass computer-to-RedPitaya pulsing and instead allow for independent pulse feedback.
 
 # Contributors
 This project is made for CS 15C class by Chaoshe Zhang, Sam Gebretsadkan, Vivian Liao and Rei Landsberger.
