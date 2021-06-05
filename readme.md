@@ -30,6 +30,9 @@ We are aiming to stabilize intensity of laser to a fluctuation range of plus-min
 
 # Motivation
 ## P 3/2 Life Measurement
+<div align="center">
+<img src="https://user-images.githubusercontent.com/77765489/120881939-7d669b80-c589-11eb-9f7a-6032d25c0008.png" width="500">
+</div>
 
 ## Problems
 Laser intensity drifts with time, and the amplitude drift could result in un-precise energy level transition, which affects energy shift induced by ac-stark shift of detuned laser. This unstable laser intensity affects the precision of Ra-226 excitation.
