@@ -34,7 +34,7 @@ We are aiming to stabilize intensity of laser to a fluctuation range of plus-min
 <div align="center">
 <img src="https://user-images.githubusercontent.com/77765489/120882021-f534c600-c589-11eb-8d38-a60a9130eace.png" width="300">
 </div>
-
+We want to measure the lifetime of the P 3/2 lifetime of the radium-226 ion. For this measurement, we need to stabilize a detuned 802 nm laser which will be used for probing the  D 5/2 to P 3/2 transitions. The need for laser intensity stabilization comes from the concept of Rabi flopping. When we raise an ion from its ground state to an excited state, it doesn’t simply remain excited; rather, it oscillates back and forth from the ground state to the excited state at a frequency known as the Rabi frequency. The Rabi frequency is directly proportional to the laser intensity. If the laser intensity is not stable, then the excitation oscillation will shift. We will end up with ions between the excited and ground state, which will increase the systematic errors in our measurements.  
 ## Problems
 Laser intensity drifts with time, and the amplitude drift could result in un-precise energy level transition, which affects energy shift induced by ac-stark shift of detuned laser. This unstable laser intensity affects the precision of Ra-226 excitation.
 
