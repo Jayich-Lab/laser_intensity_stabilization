@@ -5,7 +5,7 @@
 
 [Development Notebook](https://docs.google.com/document/d/1RtXi4E6TiI_Ld4MZSRgFrHrQVlKGbRzDl3qZmrDYwTk/edit#)
 
-We are aiming to stabilize intensity of laser to a fluctuation range of plus-minus 1% using Acousto-optic Modulator (AOM) for a long timescale (in the order of days). This stabilization will improve the precision of experiments that use laser beams.
+We are aiming to stabilize intensity of laser to a fluctuation range of plus-minus 1% using Acousto-Optic Modulator (AOM) for a long timescale (in the order of days). This stabilization will improve the precision of experiments that use laser beams.
 
 ## Table of Contents
 - [Motivation](#Motivation)
@@ -104,7 +104,7 @@ Red Pitaya is remotely controlled using a client on a computer via an internal n
 ## Code
 The programming was mainly done on the red pitaya using python and the PyRPL module, which has python defined classes for controlling the pitaya outputs and inputs. The PyRPL code was written onto a server, and a client was then made using that server. 
 There was also a simpler script made for an independent laser intensity stabilization setup using an Arduino due. The code is above under “PI_Stabilization.ino”. The Arduino presents versatility as it uses C++, a widely accessible programming language. On the other hand, the red pitaya can either be programmed using the limited PYRPL module or the native language of the pitaya, Verilog, which is less accessible. 
-Either the Arduino or the pitaya is sufficient for stabilization. Still, when it comes to pulsed feedback (discussed shortly), the Arduino is a better choice as C + + is easier to work with than Verilog. 
+Either the Arduino or the pitaya is sufficient for stabilization. Still, when it comes to pulsed feedback (discussed shortly), the Arduino is a better choice as C++ is easier to work with than Verilog. 
 
 
 ## Continuous (CW) Feedback
