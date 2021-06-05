@@ -130,15 +130,15 @@ Looking more closely at the stabilized signal, we can see no long-term drift; th
 <img src ="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/e600aa16eec254489eed7aad6a38697675a1e220/I%20stabilization.png" width = "800">
 </div>
 
-Using BIFROST laser light (20% intensity fluctuation without stablilization), we stablilized the laser to average within ± 0.1% of our setpoint intensity. Extreme peakks during stablization still stayed within ± 0.3% of setpoint.  Long term drift of intensity from BIFROST is no longer a problem with this intensity stabilizer. Most recent and important data from the Intensity Stabilization project is this graph above
+Using 802 nm laser light (20% intensity fluctuation without stablilization), we stablilized the laser to average within ± 0.1% of our setpoint intensity. Extreme peaks during stablization still stayed within ± 0.3% of setpoint.  Long term drift of intensity from 802 nm is no longer a problem with this intensity stabilizer. The graph above was taken  on the laser that was used for the P 3/2 life time measurement. 
 
-### Observations:
+Observations:
 1. It was found that **omitting** the proportional term for PID control was more stable than including proportional control.
 2. The lower the control voltage (shown in the bottom graph as it slopes downward), the less stablity we get due to the VVA response curve at different voltages.
 
 
 # Future Plans
-For P 3/2 life measurement, we need a pulsed feedback that turns on and off for millliseconds. Currently we use double AOM CW feedback as the setup; however, there are a few issues to be solved. First, the double AOM CW feedback has an intensity delay, which causes failure in the PID control; second, the paused feedback must be run from DACO. In addition to this, the second AOM's thermal fluctuations will be slightly different from the first AOM, causing de-optimization of our stablility.
+For P 3/2 life measurement, we need a pulsed feedback that turns on and off for milliseconds. Currently we use double AOM CW feedback as the setup; however, there are a few issues to be solved. First, the double AOM CW feedback has an intensity delay, which causes failure in the PID control; second, the paused feedback must be run from DACO. In addition to this, the second AOM's thermal fluctuations will be slightly different from the first AOM, causing de-optimization of our stablility.
 
 **_A possible solution for the issues may be to use [Arduino DUE](https://store.arduino.cc/usa/due) as the PID controller with the same experimental setup._**  This will bypass computer-to-RedPitaya pulsing and instead allow for independent pulse feedback.
 
