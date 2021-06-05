@@ -123,7 +123,7 @@ Using BIFROST laser light (20% intensity fluctuation without stablilization), we
 # Future Plans
 For P 3/2 life measurement, we need a pulsed feedback that turns on and off for millliseconds. Currently we use double AOM CW feedback as the setup; however, there are a few issues to be solved. First, the double AOM CW feedback has an intensity delay, which causes failure in the PID control; second, the paused feedback must be run from DACO. In addition to this, the second AOM's thermal fluctuations will be slightly different from the first AOM, causing de-optimization of our stablility.
 
-**A possible solution for the issues may be to use [Arduino DUE] (https://store.arduino.cc/usa/due) as the PID controller with the same experimental setup.**  This will bypass computer-to-RedPitaya pulsing and instead allow for independent pulse feedback.
+**_A possible solution for the issues may be to use [Arduino DUE](https://store.arduino.cc/usa/due) as the PID controller with the same experimental setup._**  This will bypass computer-to-RedPitaya pulsing and instead allow for independent pulse feedback.
 
 # Contributors
 This project is made for CS 15C class by Chaoshe Zhang, Sam Gebretsadkan, Vivian Liao and Rei Landsberger.
