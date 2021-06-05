@@ -109,9 +109,11 @@ The purpose of using a VVA in our project is to diminish the failure of the feed
 
 ## I Stabilization
 <div align="center">
-<img src =" " width = "800">
+<img src ="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/main/802nm_stabilization.png" width = "800">
 </div>
+**Most recent and important data from the Intensity Stabilization project is this graph above**
 
+Using BIFROST laser light (without stablilization had 20% intensity fluctuation), we stablilized the laser to average within $\pm$ 0.1% of our setpoint intensity.  
 
 # Future Plans
 For P 3/2 life measurement, we need a pulsed feedback that turns on and off for millliseconds. Currently we use double AOM CW feedback as the setup; however, there are two issues to be solved. First, the double AOM CW feedback has an intensity delay, which causes failure in the PID control; second, the paused feedback must be run from DACO, ?????. A possible solution for the issues may be to use Arduino as the PID controller with the same experimental setup.
