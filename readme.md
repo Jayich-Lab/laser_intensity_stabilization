@@ -46,7 +46,7 @@ Our goal for this research is to find a laser stabilization method that works fo
 # Schematics
 ## Experiment Setup Schematics
 <div align="center">
-<img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/b2fe35d18d52c8cc31f6680785b2dc8ce0ade054/Experiment%20Setup%20with%20number.png" width="1000">
+<img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/e600aa16eec254489eed7aad6a38697675a1e220/Experiment%20Setup%20New.png" width="1000">
 </div>
 
 First, the laser beam goes through the fiber and the two fiber ports, and then it goes through [Acousto-Optic Modulator (AOM)](#Acousto-Optics-Modulator-AOM) [1], which diffracts the light to different intensity. Next, 10 percent of the power is recieved by the photodiode [2], and a divider [3] divides the power signal into DC and AC. The divided signals are the live signals that will be analyzed in the PID program. A PID program is built in [Red Pitaya](#Red-Pitaya) [4]. It collects signals from the photodiode and compare it to a setpoint voltage, which we are aiming for the laser to be stabilized at, to create an error signal. The Red Pitaya will then return this DC gain error signal and send it to a [voltage variable attenuator (VVA)](#Voltage-Variable-Attenuator-VVA) [5]. The attenuator receives a DC gain signal as well as an RF reference signal, and it will output an attenuate RF gain with attenuation determined by the input control voltage. The RF gain is then amplified by an op-amp [7] and put back into the AOM to alter the intensity that goes through it.
@@ -115,13 +115,12 @@ We created pseudo pulsed feedback, but what does pulsed feedback look like? Unli
 
 ## I Stabilization
 <div align="center">
-<img src ="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/main/802nm_stabilization.png" width = "800">
+<img src ="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/e600aa16eec254489eed7aad6a38697675a1e220/I%20stabilization.png" width = "800">
 </div>
-**_Most recent and important data from the Intensity Stabilization project is this graph above_**
 
-Using BIFROST laser light (20% intensity fluctuation without stablilization), we stablilized the laser to average within $\pm$ 0.1% of our setpoint intensity. Extreme peakks during stablization still stayed within $\pm$ 0.3% of setpoint.  Long term drift of intensity from BIFROST is no longer a problem with this intensity stabilizer. Most recent and important data from the Intensity Stabilization project is this graph above
+Using BIFROST laser light (20% intensity fluctuation without stablilization), we stablilized the laser to average within ± 0.1% of our setpoint intensity. Extreme peakks during stablization still stayed within ± 0.3% of setpoint.  Long term drift of intensity from BIFROST is no longer a problem with this intensity stabilizer. Most recent and important data from the Intensity Stabilization project is this graph above
 
-###Observations:
+### Observations:
 1. It was found that **omitting** the proportional term for PID control was more stable than including proportional control.
 2. The lower the control voltage (shown in the bottom graph as it slopes downward), the less stablity we get due to the VVA response curve at different voltages.
 
