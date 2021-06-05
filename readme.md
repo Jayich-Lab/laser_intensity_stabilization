@@ -145,9 +145,9 @@ Observations:
 
 
 # Future Plans
-For P 3/2 life measurement, we need a pulsed feedback that turns on and off for milliseconds. Currently we use double AOM CW feedback as the setup; however, there are a few issues to be solved. First, the double AOM CW feedback has an intensity delay, which causes failure in the PID control; second, the paused feedback must be run from DACO. In addition to this, the second AOM's thermal fluctuations will be slightly different from the first AOM, causing de-optimization of our stablility.
+There are some issues with our current pseudo pulsed feedback setup. 1) We can’t stabilize the laser intensity right before the beam reaches the ion trap; it has to go through different optics before reaching the trap, which means it will incur some extra noise that we can’t currently stabilize. 2) The second AOM (the one receiving pulsed signal) changes how fast it can turn on and off based on the environmental temperature. 
+Potential solution: utilize an [Arduino DUE](https://store.arduino.cc/usa/due) to make independent pulsed feedback. This would eliminate the second AOM and allow us to stabilize the laser light right before it reaches the ion trap. 
 
-**_A possible solution for the issues may be to use [Arduino DUE](https://store.arduino.cc/usa/due) as the PID controller with the same experimental setup._**  This will bypass computer-to-RedPitaya pulsing and instead allow for independent pulse feedback.
 
 # Contributors
 This project is made for CS 15C class by Chaoshen Zhang, Sam Gebretsadkan, Vivian Liao and Rei Landsberger.
