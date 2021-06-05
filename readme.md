@@ -85,22 +85,27 @@ The purpose of using a VVA in our project is to diminish the failure of the feed
 <div align="center">
 <img src="https://user-images.githubusercontent.com/77765489/120875179-66ab4f00-c55f-11eb-840d-cb8d25912a90.png" width="600">
 </div>
+To summarize, the laser goes into the photodiode, and the photodiode generates a voltage signal in the range of +/- 4 volts. The red pitaya can only take a voltage from -1 to 1 volt, so we place a ¼ voltage divider in front of the pitaya. The red pitaya is remotely controlled using a client on a computer via an internal network. 
+After receiving the signal, the pitaya runs a python script (discussed in the next section), compares the input voltage to the setpoint voltage, and applies a control signal, C, which depends on the proportional integral and differential terms of the error signal. The relationship can be seen in the equation above. We neglected the differential term for our setup as we weren’t concerned with stabilizing at high frequency (laser fluctuations tended to be low frequency). The control signal from the pitaya goes through an operational amplifier which increases the control range from +/- 1 volt to 4 and 12 volts. The Voltage Variable Attenuator (VVA) section explains why we want to be in the 4 -12 voltage range. The control signal was also sent to an oscilloscope at the same time. The majority of the data was taken on an oscilloscope. The data from the oscilloscope was read by a server on the computer and sent to the red pitaya. The computer (server and client) are constantly communicating with the red pitaya during  the feedback loop. 
 
 ## Code
+The programming was mainly done on the red pitaya using python and the PyRPL module, which has python defined classes for controlling the pitaya outputs and inputs. The PyRPL code was written onto a server, and a client was then made using that server. 
+There was also a simpler script made for an independent laser intensity stabilization setup using an Arduino due. The code is above under “PI_Stabilization.ino”. The Arduino presents versatility as it uses c + +, a widely accessible programming language. On the other hand, the red pitaya can either be programmed using the limited PYRPL module or the native language of the pitaya, Verilog, which is less accessible. 
+Either the Arduino or the pitaya is sufficient for stabilization. Still, when it comes to pulsed feedback (discussed shortly), the Arduino is a better choice as C + + is easier to work with than Verilog. 
 
 
 ## Continuous (CW) Feedback
 <div align="center">
 <img src="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/e3fd1acefe8639c5e60ba01c673978963c45f419/pulsed%20feedback.png" width="600">
 </div>
-
+We need to identify a clear distinction between continuous and pulsed feedback. In this experiment, we are applying continuous waveform (CW) feedback. We are continuously reading data and stabilizing it over time. The picture above illustrates a summary of our CW feedback in a rectangle on the right. Generally, in ion trap experiments, laser beams are sent to the ion trap in pulse sequences (on the order of microseconds). We can create a stabilized pulsing laser by placing a second AOM after the laser is stabilized. The second AOM will receive a signal that turns it “on” or “off,” This way, we have a pseudo pulsed feedback setup. 
 
 ## Pulsed Feedback
 <div align="center">
 <img src="https://user-images.githubusercontent.com/77765489/120880065-cfed8b00-c57c-11eb-9de1-02c7f2a7fd75.png" width="600">
 </div>
-
-
+We created pseudo pulsed feedback, but what does pulsed feedback look like? Unlike CW feedback, in pulsed feedback, we only take data on short intervals (µs). The above graph models a pulse sequence where the laser is on for µs and off for ms. During the period the laser is on, a microcontroller collects data and generates an error signal E1. When the laser is off, the microcontroller outputs a constant dc offset. After the laser is turned on again, a fixed dc voltage (red line) is outputted based on the error signal E1. This process continues for all pulses.
+*Note only CW feedback was used in this project 
 
 # Iterations
 ## PI Stabilization
@@ -110,12 +115,13 @@ The purpose of using a VVA in our project is to diminish the failure of the feed
 
 ## I Stabilization
 <div align="center">
-<img src ="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/60595c1473e463a10eb42028a74972215af6e2f0/I%20stabilization.png" width = "800">
+<img src ="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/main/802nm_stabilization.png" width = "800">
 </div>
+**_Most recent and important data from the Intensity Stabilization project is this graph above_**
 
-Using BIFROST laser light (20% intensity fluctuation without stablilization), we stablilized the laser to average within plus or minus 0.1% of our setpoint intensity. Extreme peakks during stablization still stayed within plus or minus 0.3% of setpoint.  Long term drift of intensity from BIFROST is no longer a problem with this intensity stabilizer. Most recent and important data from the Intensity Stabilization project is this graph above
+Using BIFROST laser light (20% intensity fluctuation without stablilization), we stablilized the laser to average within $\pm$ 0.1% of our setpoint intensity. Extreme peakks during stablization still stayed within $\pm$ 0.3% of setpoint.  Long term drift of intensity from BIFROST is no longer a problem with this intensity stabilizer. Most recent and important data from the Intensity Stabilization project is this graph above
 
-### Observations:
+###Observations:
 1. It was found that **omitting** the proportional term for PID control was more stable than including proportional control.
 2. The lower the control voltage (shown in the bottom graph as it slopes downward), the less stablity we get due to the VVA response curve at different voltages.
 
