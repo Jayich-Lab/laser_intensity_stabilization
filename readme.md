@@ -128,7 +128,7 @@ We created pseudo pulsed feedback, but what does pulsed feedback look like? Unli
 </div>
 <br>
 
-Laser intensity was stabilized to ±0.2%, which surpasses our goal of ± 1%. The blue plot is the signal received by the photodiode, the orange curve is the control signal output by the red pitaya, and the green line is the stabilized signal.  We took the data in 8 hours and found no drifts in the stabilization, which indicates that our setup is robust since it maintains the same intensity while environmental parameters such as temperature change. Using only the P and I terms, we were able to minimize the initial noise by a factor of 200. 
+Laser intensity was stabilized to ± 0.2%, which surpasses our goal of ± 1%. The blue plot is the signal received by the photodiode, the orange curve is the control signal output by the red pitaya, and the green line is the stabilized signal.  We took the data in 8 hours and found no drifts in the stabilization, which indicates that our setup is robust since it maintains the same intensity while environmental parameters such as temperature change. Using only the P and I terms, we were able to minimize the initial noise by a factor of 200. 
 <br>
 
 <div align="center">
@@ -136,7 +136,7 @@ Laser intensity was stabilized to ±0.2%, which surpasses our goal of ± 1%. The
 </div>
 <br>
 
-Looking more closely at the stabilized signal, we can see no long-term drift; the signal only oscillates at high frequency. This high-frequency noise can be accounted for by the internal noise of the photodiode. The ±0.2% fluctuation in our data was partly correlated to the photodiode uncertainty; the rest of the noise comes from the control signal output by the pitaya. The above data set was preliminary data and demonstrated the sufficiency of our stabilization for the P 3/2 life measurement. 
+Looking more closely at the stabilized signal, we can see no long-term drift; the signal only oscillates at high frequency. This high-frequency noise can be accounted for by the internal noise of the photodiode. The ± 0.2% fluctuation in our data was partly correlated to the photodiode uncertainty; the rest of the noise comes from the control signal output by the pitaya. The above data set was preliminary data and demonstrated the sufficiency of our stabilization for the P 3/2 life measurement. 
 
 ## I Stabilization
 <div align="center">
@@ -151,6 +151,10 @@ Observations:
 
 
 # Future Plans
+<div align="center">
+<img src ="https://github.com/Jayich-Lab/laser_intensity_stabilization/blob/b05f487094b440fb5e0732c47b2f48b5b8810244/power.jpg" width = "800">
+</div>
+
 There are some issues with our current pseudo pulsed feedback setup. 1) We can’t stabilize the laser intensity right before the beam reaches the ion trap; it has to go through different optics before reaching the trap, which means it will incur some extra noise that we can’t currently stabilize. 2) The second AOM (the one receiving pulsed signal) changes how fast it can turn on and off based on the environmental temperature. 
 Potential solution: utilize an [Arduino DUE](https://store.arduino.cc/usa/due) to make independent pulsed feedback. This would eliminate the second AOM and allow us to stabilize the laser light right before it reaches the ion trap. 
 
