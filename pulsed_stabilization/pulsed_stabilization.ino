@@ -3,9 +3,9 @@ int output_setpoint = 2047;
 float p_gain = 1.;
 float i_gain = 0.;
 float i_term = 0;
-int error_range = 30;
-int error[list_range];
-int DIGITALPIN = 1;
+//int error_range = 30;
+int error[30];
+int DIGITALPIN = 8;
 
 void setup() {
   Serial.begin(115200);
@@ -13,6 +13,8 @@ void setup() {
   ADC->ADC_MR |= 0x80; // these lines set free running mode on adc 7 (pin A0)
   ADC->ADC_CR = 2;
   ADC->ADC_CHER = 0x80;
+
+  memset(error,0,30);
 
   analogWriteResolution(12);
   analogWrite(DAC0, output_setpoint);
@@ -24,12 +26,18 @@ int read_adc() {
   return a0;
 }
 
-int push(int list, int range){
-  for (int i=0, i<=range-2, i++){
-    list[i] = list[i+1];
-  }
-  list[range-1] = read_adc()-input_setpoint;
-  return list
+//int*array push(array list, int range){
+//  for (int i = 0; i <= (range-2); i++){
+//    array[i] = array[i+1];
+//  }
+//  array[range-1] = read_adc()-input_setpoint;
+//  return array
+//}
+
+void push (int (& list) [30] ){
+  for (int i = 0; i < 30-1; i++)
+    list[i] = list[i+1]; 
+  list[30-1] = read_adc()-input_setpoint;
 }
 
 float average (int * array, int range)  // assuming array is int.
@@ -41,14 +49,16 @@ float average (int * array, int range)  // assuming array is int.
 }
 
 void loop() {
-  if (digitalRead == HIGH) {
-    while (digitalRead == HIGH) {
-      error = push(error, error_range);
+  if (digitalRead(DIGITALPIN) == HIGH) {
+    while (digitalRead(DIGITALPIN) != LOW) {
+      push(error);
     }
-    if (digitalRead == LOW) {
-      int correction = (int)(average(error, error_range));
-      output_setpoint += correction;
-      analogWrite(DAC0, output_setpoint);
+    int correction = (int)(average(error, 30));
+    output_setpoint += correction;
+    analogWrite(DAC0, output_setpoint);
+    for (int i = 0; i < 30; i++){
+      Serial.println(error[i]);
     }
+    Serial.println(output_setpoint);
   }
 }
