@@ -1956,11 +1956,22 @@ design rules under a new name.</description>
 <wire x1="12" y1="6" x2="8" y2="6" width="2" layer="1"/>
 </signal>
 <signal name="GND">
-<polygon width="0.1524" layer="16" isolate="0.4064" rank="6">
+<polygon width="0.1524" layer="16">
 <vertex x="0" y="93.98"/>
 <vertex x="120.015" y="93.98"/>
 <vertex x="120.015" y="0"/>
 <vertex x="0" y="0"/>
+</polygon>
+</signal>
+<signal name="ISO">
+<polygon width="0.1524" layer="16" isolate="0.032259375">
+<vertex x="7.62" y="50.546"/>
+<vertex x="7.62" y="41.021"/>
+<vertex x="16.129" y="41.021"/>
+<vertex x="17.145" y="42.037"/>
+<vertex x="17.145" y="49.53"/>
+<vertex x="15.748" y="50.927"/>
+<vertex x="8.001" y="50.927"/>
 </polygon>
 </signal>
 </signals>

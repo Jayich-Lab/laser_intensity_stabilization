@@ -1963,6 +1963,20 @@ design rules under a new name.</description>
 <vertex x="0" y="0"/>
 </polygon>
 </signal>
+<signal name="ISO">
+<polygon width="0.1524" layer="16" isolate="0.6096">
+<vertex x="7.62" y="50.927"/>
+<vertex x="16.51" y="50.927"/>
+<vertex x="16.637" y="50.8"/>
+<vertex x="17.145" y="50.292"/>
+<vertex x="17.145" y="41.021"/>
+<vertex x="16.002" y="39.878"/>
+<vertex x="15.367" y="39.878"/>
+<vertex x="7.874" y="39.878"/>
+<vertex x="6.858" y="40.894"/>
+<vertex x="6.858" y="50.165"/>
+</polygon>
+</signal>
 </signals>
 <mfgpreviewcolors>
 <mfgpreviewcolor name="soldermaskcolor" color="0xC8008000"/>
