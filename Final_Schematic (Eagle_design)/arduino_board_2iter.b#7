@@ -2593,10 +2593,10 @@ design rules under a new name.</description>
 <element name="V-TUNE" library="holes" package="2,8-PAD-SQUARE" value="MOUNT-PAD-SQUARE2.8" x="46.85" y="90.19" smashed="yes">
 <attribute name="POPULARITY" value="3" x="82.41" y="-17.76" size="1.778" layer="27" display="off"/>
 </element>
-<element name="PAD1" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="3,81/1,4" package3d_urn="urn:adsk.eagle:package:30835/1" value="" x="15.25" y="83.14" smashed="yes">
-<attribute name="NAME" x="13.345" y="85.426" size="1.27" layer="25" ratio="10"/>
-<attribute name="POPULARITY" value="14" x="15.25" y="83.14" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="15.25" y="84.34" size="0.0254" layer="27"/>
+<element name="PAD1" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="3,81/1,4" package3d_urn="urn:adsk.eagle:package:30835/1" value="" x="12.74" y="89.29" smashed="yes" rot="MR0">
+<attribute name="NAME" x="14.645" y="91.576" size="1.27" layer="26" ratio="10" rot="MR0"/>
+<attribute name="POPULARITY" value="14" x="12.74" y="89.29" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="VALUE" x="12.74" y="90.49" size="0.0254" layer="28" rot="MR0"/>
 </element>
 </elements>
 <signals>
@@ -2877,7 +2877,7 @@ design rules under a new name.</description>
 <wire x1="80.31" y1="88.97" x2="82.88" y2="91.54" width="0.75" layer="1"/>
 </signal>
 <signal name="N$1">
-<via x="11.27" y="91.69" extent="1-16" drill="0.35"/>
+<via x="11.47" y="91.88" extent="1-16" drill="0.35"/>
 </signal>
 </signals>
 <mfgpreviewcolors>

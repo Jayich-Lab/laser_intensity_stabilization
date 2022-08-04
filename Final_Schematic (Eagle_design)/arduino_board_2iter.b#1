@@ -2834,18 +2834,6 @@ design rules under a new name.</description>
 <wire x1="86.93" y1="91.54" x2="82.88" y2="91.54" width="0.75" layer="1"/>
 <wire x1="80.31" y1="88.97" x2="82.88" y2="91.54" width="0.75" layer="1"/>
 </signal>
-<signal name="ISO">
-<polygon width="0.1524" layer="16" isolate="1.27">
-<vertex x="102.75" y="74.6"/>
-<vertex x="112.5" y="74.6"/>
-<vertex x="112.7" y="74.4"/>
-<vertex x="112.7" y="63.75"/>
-<vertex x="112.95" y="63.5"/>
-<vertex x="103.6" y="63.5"/>
-<vertex x="103.15" y="63.95"/>
-<vertex x="103.15" y="74.2"/>
-</polygon>
-</signal>
 </signals>
 <mfgpreviewcolors>
 <mfgpreviewcolor name="soldermaskcolor" color="0xC8008000"/>
