@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.0">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="1" unitdist="mil" unit="inch" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -23,17 +23,17 @@
 <layer number="13" name="Route13" color="21" fill="1" visible="no" active="no"/>
 <layer number="14" name="Route14" color="22" fill="1" visible="no" active="no"/>
 <layer number="15" name="Route15" color="23" fill="1" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
@@ -47,9 +47,9 @@
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
-<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
-<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
@@ -59,7 +59,7 @@
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
 <layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
@@ -156,10 +156,10 @@
 </layers>
 <board>
 <plain>
-<wire x1="0.04" y1="8.09" x2="145.04" y2="8.09" width="0" layer="20"/>
+<wire x1="25.44" y1="8.09" x2="145.04" y2="8.09" width="0" layer="20"/>
 <wire x1="145.04" y1="8.09" x2="145" y2="100" width="0" layer="20"/>
-<wire x1="145" y1="100" x2="0" y2="100" width="0" layer="20"/>
-<wire x1="0" y1="100" x2="0.04" y2="8.09" width="0" layer="20"/>
+<wire x1="145" y1="100" x2="25.4" y2="100" width="0" layer="20"/>
+<wire x1="25.4" y1="100" x2="25.44" y2="8.09" width="0" layer="20"/>
 </plain>
 <libraries>
 <library name="holes">
@@ -2217,6 +2217,35 @@ www.isabellenhuette.de&lt;p&gt;
 </package>
 </packages>
 </library>
+<library name="wirepad" urn="urn:adsk.eagle:library:412">
+<description>&lt;b&gt;Single Pads&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="1,6/0,9" urn="urn:adsk.eagle:footprint:30812/1" library_version="2">
+<description>&lt;b&gt;THROUGH-HOLE PAD&lt;/b&gt;</description>
+<wire x1="-0.508" y1="0.762" x2="-0.762" y2="0.762" width="0.1524" layer="21"/>
+<wire x1="-0.762" y1="0.762" x2="-0.762" y2="0.508" width="0.1524" layer="21"/>
+<wire x1="-0.762" y1="-0.508" x2="-0.762" y2="-0.762" width="0.1524" layer="21"/>
+<wire x1="-0.762" y1="-0.762" x2="-0.508" y2="-0.762" width="0.1524" layer="21"/>
+<wire x1="0.508" y1="-0.762" x2="0.762" y2="-0.762" width="0.1524" layer="21"/>
+<wire x1="0.762" y1="-0.762" x2="0.762" y2="-0.508" width="0.1524" layer="21"/>
+<wire x1="0.762" y1="0.508" x2="0.762" y2="0.762" width="0.1524" layer="21"/>
+<wire x1="0.762" y1="0.762" x2="0.508" y2="0.762" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="0.635" width="0.1524" layer="51"/>
+<pad name="1" x="0" y="0" drill="0.9144" diameter="1.6002" shape="octagon"/>
+<text x="-0.762" y="1.016" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="0" y="0.6" size="0.0254" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<packages3d>
+<package3d name="1,6/0,9" urn="urn:adsk.eagle:package:30840/1" type="box" library_version="2">
+<description>THROUGH-HOLE PAD</description>
+<packageinstances>
+<packageinstance name="1,6/0,9"/>
+</packageinstances>
+</package3d>
+</packages3d>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -2467,18 +2496,18 @@ design rules under a new name.</description>
 <attribute name="PURCHASE-URL" value="https://pricing.snapeda.com/search/part/BOB-12009/?ref=eda" x="-36.73" y="108.52" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="VALUE" x="30.97" y="81.7" size="1.27" layer="28" rot="MR90" align="top-left"/>
 </element>
-<element name="PD" library="jayich_lab_eagle_library" package="CONN_1-1337543-0" value="1-1337543-0" x="12.49" y="24.38" smashed="yes" rot="MR180">
-<attribute name="COMMENT" value="1-1337543-0" x="42.97" y="98.04" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="DESCRIPTION" value=" BNC Ins R/A PCB Skt 50Ohm White " x="42.97" y="98.04" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="DIGI-KEY_PART_NUMBER" value="A97553-ND" x="42.97" y="98.04" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="DIGI-KEY_PURCHASE_URL" value="https://www.digikey.com/product-detail/en/te-connectivity-amp-connectors/1-1337543-0/A97553-ND/1755940?utm_source=snapeda&amp;utm_medium=aggregator&amp;utm_campaign=symbol" x="42.97" y="98.04" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="MF" value="TE Connectivity" x="42.97" y="98.04" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="MP" value="1-1337543-0" x="42.97" y="98.04" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="NAME" x="-20.572" y="18.11825" size="1.272390625" layer="26" rot="MR180"/>
-<attribute name="NUMBER_OF_POSITIONS" value="1" x="42.97" y="98.04" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="PACKAGE" value="None" x="42.97" y="98.04" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="TE_PURCHASE_URL" value="https://www.te.com/usa-en/product-1-1337543-0.html?te_bu=Cor&amp;te_type=disp&amp;te_campaign=seda_glo_cor-seda-global-disp-prtnr-fy19-seda-model-bom-cta_sma-317_1&amp;elqCampaignId=32493" x="42.97" y="98.04" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="VALUE" x="-20.5407" y="31.636740625" size="1.27118125" layer="28" rot="MR180"/>
+<element name="PD" library="jayich_lab_eagle_library" package="CONN_1-1337543-0" value="1-1337543-0" x="37.89" y="24.38" smashed="yes">
+<attribute name="COMMENT" value="1-1337543-0" x="68.37" y="-49.28" size="1.778" layer="27" display="off"/>
+<attribute name="DESCRIPTION" value=" BNC Ins R/A PCB Skt 50Ohm White " x="68.37" y="-49.28" size="1.778" layer="27" display="off"/>
+<attribute name="DIGI-KEY_PART_NUMBER" value="A97553-ND" x="68.37" y="-49.28" size="1.778" layer="27" display="off"/>
+<attribute name="DIGI-KEY_PURCHASE_URL" value="https://www.digikey.com/product-detail/en/te-connectivity-amp-connectors/1-1337543-0/A97553-ND/1755940?utm_source=snapeda&amp;utm_medium=aggregator&amp;utm_campaign=symbol" x="68.37" y="-49.28" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="TE Connectivity" x="68.37" y="-49.28" size="1.778" layer="27" display="off"/>
+<attribute name="MP" value="1-1337543-0" x="68.37" y="-49.28" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="4.828" y="30.64175" size="1.272390625" layer="25"/>
+<attribute name="NUMBER_OF_POSITIONS" value="1" x="68.37" y="-49.28" size="1.778" layer="27" display="off"/>
+<attribute name="PACKAGE" value="None" x="68.37" y="-49.28" size="1.778" layer="27" display="off"/>
+<attribute name="TE_PURCHASE_URL" value="https://www.te.com/usa-en/product-1-1337543-0.html?te_bu=Cor&amp;te_type=disp&amp;te_campaign=seda_glo_cor-seda-global-disp-prtnr-fy19-seda-model-bom-cta_sma-317_1&amp;elqCampaignId=32493" x="68.37" y="-49.28" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="4.8593" y="17.123259375" size="1.27118125" layer="27"/>
 </element>
 <element name="R1" library="resistor-shunt" package="SMS-0" value="1K" x="109.2" y="62.35" smashed="yes" rot="R90">
 <attribute name="MF" value="" x="217.15" y="113.15" size="1.778" layer="27" rot="R90" display="off"/>
@@ -2534,35 +2563,50 @@ design rules under a new name.</description>
 <attribute name="POPULARITY" value="52" x="187.4" y="-24" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="121.36" y="90.554" size="0.0254" layer="27"/>
 </element>
-<element name="TTL-1" library="jayich_lab_eagle_library" package="CONN_1-1337543-0" value="1-1337543-0" x="12.16" y="42.88" smashed="yes" rot="MR180">
-<attribute name="COMMENT" value="1-1337543-0" x="79.47" y="116.54" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="DESCRIPTION" value=" BNC Ins R/A PCB Skt 50Ohm White " x="79.47" y="116.54" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="DIGI-KEY_PART_NUMBER" value="A97553-ND" x="79.47" y="116.54" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="DIGI-KEY_PURCHASE_URL" value="https://www.digikey.com/product-detail/en/te-connectivity-amp-connectors/1-1337543-0/A97553-ND/1755940?utm_source=snapeda&amp;utm_medium=aggregator&amp;utm_campaign=symbol" x="79.47" y="116.54" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="MF" value="TE Connectivity" x="79.47" y="116.54" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="MP" value="1-1337543-0" x="79.47" y="116.54" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="NAME" x="-20.902" y="36.61825" size="1.272390625" layer="26" rot="MR180"/>
-<attribute name="NUMBER_OF_POSITIONS" value="1" x="79.47" y="116.54" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="PACKAGE" value="None" x="79.47" y="116.54" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="TE_PURCHASE_URL" value="https://www.te.com/usa-en/product-1-1337543-0.html?te_bu=Cor&amp;te_type=disp&amp;te_campaign=seda_glo_cor-seda-global-disp-prtnr-fy19-seda-model-bom-cta_sma-317_1&amp;elqCampaignId=32493" x="79.47" y="116.54" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="VALUE" x="-20.8707" y="50.136740625" size="1.27118125" layer="28" rot="MR180"/>
+<element name="TTL-1" library="jayich_lab_eagle_library" package="CONN_1-1337543-0" value="1-1337543-0" x="37.56" y="42.88" smashed="yes">
+<attribute name="COMMENT" value="1-1337543-0" x="104.87" y="-30.78" size="1.778" layer="27" display="off"/>
+<attribute name="DESCRIPTION" value=" BNC Ins R/A PCB Skt 50Ohm White " x="104.87" y="-30.78" size="1.778" layer="27" display="off"/>
+<attribute name="DIGI-KEY_PART_NUMBER" value="A97553-ND" x="104.87" y="-30.78" size="1.778" layer="27" display="off"/>
+<attribute name="DIGI-KEY_PURCHASE_URL" value="https://www.digikey.com/product-detail/en/te-connectivity-amp-connectors/1-1337543-0/A97553-ND/1755940?utm_source=snapeda&amp;utm_medium=aggregator&amp;utm_campaign=symbol" x="104.87" y="-30.78" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="TE Connectivity" x="104.87" y="-30.78" size="1.778" layer="27" display="off"/>
+<attribute name="MP" value="1-1337543-0" x="104.87" y="-30.78" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="4.498" y="49.14175" size="1.272390625" layer="25"/>
+<attribute name="NUMBER_OF_POSITIONS" value="1" x="104.87" y="-30.78" size="1.778" layer="27" display="off"/>
+<attribute name="PACKAGE" value="None" x="104.87" y="-30.78" size="1.778" layer="27" display="off"/>
+<attribute name="TE_PURCHASE_URL" value="https://www.te.com/usa-en/product-1-1337543-0.html?te_bu=Cor&amp;te_type=disp&amp;te_campaign=seda_glo_cor-seda-global-disp-prtnr-fy19-seda-model-bom-cta_sma-317_1&amp;elqCampaignId=32493" x="104.87" y="-30.78" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="4.5293" y="35.623259375" size="1.27118125" layer="27"/>
 </element>
-<element name="TTL-2" library="jayich_lab_eagle_library" package="CONN_1-1337543-0" value="1-1337543-0" x="11.96" y="60.47" smashed="yes" rot="MR180">
-<attribute name="COMMENT" value="1-1337543-0" x="28.47" y="155.72" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="DESCRIPTION" value=" BNC Ins R/A PCB Skt 50Ohm White " x="28.47" y="155.72" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="DIGI-KEY_PART_NUMBER" value="A97553-ND" x="28.47" y="155.72" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="DIGI-KEY_PURCHASE_URL" value="https://www.digikey.com/product-detail/en/te-connectivity-amp-connectors/1-1337543-0/A97553-ND/1755940?utm_source=snapeda&amp;utm_medium=aggregator&amp;utm_campaign=symbol" x="28.47" y="155.72" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="MF" value="TE Connectivity" x="28.47" y="155.72" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="MP" value="1-1337543-0" x="28.47" y="155.72" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="NAME" x="-21.102" y="54.20825" size="1.272390625" layer="26" rot="MR180"/>
-<attribute name="NUMBER_OF_POSITIONS" value="1" x="28.47" y="155.72" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="PACKAGE" value="None" x="28.47" y="155.72" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="TE_PURCHASE_URL" value="https://www.te.com/usa-en/product-1-1337543-0.html?te_bu=Cor&amp;te_type=disp&amp;te_campaign=seda_glo_cor-seda-global-disp-prtnr-fy19-seda-model-bom-cta_sma-317_1&amp;elqCampaignId=32493" x="28.47" y="155.72" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="VALUE" x="-21.0707" y="67.726740625" size="1.27118125" layer="28" rot="MR180"/>
+<element name="TTL-2" library="jayich_lab_eagle_library" package="CONN_1-1337543-0" value="1-1337543-0" x="37.36" y="60.47" smashed="yes">
+<attribute name="COMMENT" value="1-1337543-0" x="53.87" y="-34.78" size="1.778" layer="27" display="off"/>
+<attribute name="DESCRIPTION" value=" BNC Ins R/A PCB Skt 50Ohm White " x="53.87" y="-34.78" size="1.778" layer="27" display="off"/>
+<attribute name="DIGI-KEY_PART_NUMBER" value="A97553-ND" x="53.87" y="-34.78" size="1.778" layer="27" display="off"/>
+<attribute name="DIGI-KEY_PURCHASE_URL" value="https://www.digikey.com/product-detail/en/te-connectivity-amp-connectors/1-1337543-0/A97553-ND/1755940?utm_source=snapeda&amp;utm_medium=aggregator&amp;utm_campaign=symbol" x="53.87" y="-34.78" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="TE Connectivity" x="53.87" y="-34.78" size="1.778" layer="27" display="off"/>
+<attribute name="MP" value="1-1337543-0" x="53.87" y="-34.78" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="4.298" y="66.73175" size="1.272390625" layer="25"/>
+<attribute name="NUMBER_OF_POSITIONS" value="1" x="53.87" y="-34.78" size="1.778" layer="27" display="off"/>
+<attribute name="PACKAGE" value="None" x="53.87" y="-34.78" size="1.778" layer="27" display="off"/>
+<attribute name="TE_PURCHASE_URL" value="https://www.te.com/usa-en/product-1-1337543-0.html?te_bu=Cor&amp;te_type=disp&amp;te_campaign=seda_glo_cor-seda-global-disp-prtnr-fy19-seda-model-bom-cta_sma-317_1&amp;elqCampaignId=32493" x="53.87" y="-34.78" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="4.3293" y="53.213259375" size="1.27118125" layer="27"/>
 </element>
 <element name="U$1" library="DUElib130425" package="DUE(NORMAL)" value="DUE(NORMAL)" x="102.26" y="42.4" smashed="yes"/>
 <element name="V-TUNE" library="holes" package="2,8-PAD-SQUARE" value="MOUNT-PAD-SQUARE2.8" x="72.25" y="90.19" smashed="yes">
 <attribute name="POPULARITY" value="3" x="107.81" y="-17.76" size="1.778" layer="27" display="off"/>
+</element>
+<element name="PAD1" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="1,6/0,9" package3d_urn="urn:adsk.eagle:package:30840/1" value="" x="35.1028" y="74.549" smashed="yes">
+<attribute name="NAME" x="34.3408" y="75.565" size="1.27" layer="25" ratio="10"/>
+<attribute name="POPULARITY" value="7" x="35.1028" y="74.549" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="35.1028" y="75.149" size="0.0254" layer="27"/>
+</element>
+<element name="PAD2" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="1,6/0,9" package3d_urn="urn:adsk.eagle:package:30840/1" value="" x="37.338" y="74.549" smashed="yes">
+<attribute name="NAME" x="36.576" y="75.565" size="1.27" layer="25" ratio="10"/>
+<attribute name="POPULARITY" value="7" x="37.338" y="74.549" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="37.338" y="75.149" size="0.0254" layer="27"/>
+</element>
+<element name="PAD3" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="1,6/0,9" package3d_urn="urn:adsk.eagle:package:30840/1" value="" x="48.7172" y="24.4094" smashed="yes">
+<attribute name="NAME" x="47.9552" y="25.4254" size="1.27" layer="25" ratio="10"/>
+<attribute name="POPULARITY" value="7" x="48.7172" y="24.4094" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="48.7172" y="25.0094" size="0.0254" layer="27"/>
 </element>
 </elements>
 <signals>
@@ -2588,8 +2632,8 @@ design rules under a new name.</description>
 <contactref element="U$1" pad="5V_ICSP"/>
 <wire x1="94.5738" y1="64.9" x2="94.65" y2="64.8238" width="0.75" layer="1"/>
 <polygon width="0.1524" layer="16" isolate="1.27" rank="6">
-<vertex x="0" y="100"/>
-<vertex x="0" y="7.83"/>
+<vertex x="25.4" y="100"/>
+<vertex x="25.4" y="7.83"/>
 <vertex x="145.4" y="7.83"/>
 <vertex x="145.4" y="100"/>
 </polygon>
@@ -2614,15 +2658,15 @@ design rules under a new name.</description>
 <wire x1="63.14" y1="90.19" x2="86.47" y2="67.59" width="0" layer="19" extent="1-1"/>
 <wire x1="38.2" y1="93.28" x2="63.14" y2="90.19" width="0" layer="19" extent="1-1"/>
 <wire x1="38.2" y1="83.12" x2="38.2" y2="93.28" width="0" layer="19" extent="1-1"/>
-<wire x1="6.88" y1="65.55" x2="38.2" y2="83.12" width="0" layer="19" extent="1-1"/>
-<wire x1="11.96" y1="63.01" x2="6.88" y2="65.55" width="0" layer="19" extent="1-1"/>
-<wire x1="6.88" y1="55.39" x2="11.96" y2="63.01" width="0" layer="19" extent="1-1"/>
-<wire x1="7.08" y1="47.96" x2="6.88" y2="55.39" width="0" layer="19" extent="1-1"/>
-<wire x1="12.16" y1="45.42" x2="7.08" y2="47.96" width="0" layer="19" extent="1-1"/>
-<wire x1="7.08" y1="37.8" x2="12.16" y2="45.42" width="0" layer="19" extent="1-1"/>
-<wire x1="7.41" y1="29.46" x2="7.08" y2="37.8" width="0" layer="19" extent="1-1"/>
-<wire x1="12.49" y1="26.92" x2="7.41" y2="29.46" width="0" layer="19" extent="1-1"/>
-<wire x1="7.41" y1="19.3" x2="12.49" y2="26.92" width="0" layer="19" extent="1-1"/>
+<wire x1="32.28" y1="65.55" x2="38.2" y2="83.12" width="0" layer="19" extent="1-1"/>
+<wire x1="37.36" y1="57.93" x2="32.28" y2="65.55" width="0" layer="19" extent="1-1"/>
+<wire x1="32.28" y1="55.39" x2="37.36" y2="57.93" width="0" layer="19" extent="1-1"/>
+<wire x1="32.48" y1="47.96" x2="32.28" y2="55.39" width="0" layer="19" extent="1-1"/>
+<wire x1="37.56" y1="40.34" x2="32.48" y2="47.96" width="0" layer="19" extent="1-1"/>
+<wire x1="32.48" y1="37.8" x2="37.56" y2="40.34" width="0" layer="19" extent="1-1"/>
+<wire x1="32.81" y1="29.46" x2="32.48" y2="37.8" width="0" layer="19" extent="1-1"/>
+<wire x1="37.89" y1="21.84" x2="32.81" y2="29.46" width="0" layer="19" extent="1-1"/>
+<wire x1="32.81" y1="19.3" x2="37.89" y2="21.84" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$3">
 <contactref element="R1" pad="1"/>
@@ -2702,23 +2746,35 @@ design rules under a new name.</description>
 <signal name="N$12">
 <contactref element="TTL-1" pad="1"/>
 <contactref element="LLC" pad="HV1"/>
-<wire x1="10.15" y1="94.5" x2="14.05" y2="98.4" width="0.75" layer="1"/>
-<wire x1="10.15" y1="94.5" x2="10.15" y2="43.33" width="0.75" layer="1"/>
-<wire x1="14.05" y1="98.4" x2="41.3" y2="98.4" width="0.75" layer="1"/>
-<wire x1="12.16" y1="42.88" x2="10.6" y2="42.88" width="0.75" layer="1"/>
-<wire x1="10.6" y1="42.88" x2="10.15" y2="43.33" width="0.75" layer="1"/>
-<wire x1="41.3" y1="98.4" x2="45.82" y2="93.88" width="0.75" layer="1"/>
+<wire x1="28.29985" y1="96.33936875" x2="28.29985" y2="81.313146875" width="0.75" layer="1"/>
+<wire x1="37.56" y1="42.88" x2="37.3716" y2="43.0684" width="0.75" layer="16"/>
+<wire x1="41.49184375" y1="98.20815625" x2="45.82" y2="93.88" width="0.75" layer="1"/>
 <wire x1="45.82" y1="93.88" x2="45.82" y2="93.28" width="0.75" layer="1"/>
+<via x="35.131959375" y="74.5255625" extent="1-16" drill="0.35"/>
+<wire x1="28.29985" y1="81.313146875" x2="28.31021875" y2="81.302778125" width="0.75" layer="1"/>
+<wire x1="28.29985" y1="96.33936875" x2="30.1869" y2="98.22641875" width="0.75" layer="1"/>
+<wire x1="30.1869" y1="98.22641875" x2="41.47358125" y2="98.22641875" width="0.75" layer="1"/>
+<wire x1="41.47358125" y1="98.22641875" x2="41.49184375" y2="98.20815625" width="0.1524" layer="1"/>
+<wire x1="35.131959375" y1="74.5255625" x2="28.344375" y2="81.313146875" width="0.75" layer="1"/>
+<wire x1="28.344375" y1="81.313146875" x2="28.29985" y2="81.313146875" width="0.1524" layer="1"/>
+<wire x1="35.131959375" y1="74.5255625" x2="35.131959375" y2="45.308040625" width="0.75" layer="16"/>
+<wire x1="35.131959375" y1="45.308040625" x2="37.56" y2="42.88" width="0.75" layer="16"/>
 </signal>
 <signal name="N$13">
 <contactref element="TTL-2" pad="1"/>
 <contactref element="LLC" pad="HV2"/>
-<wire x1="16.1256" y1="96.9444" x2="13.992" y2="94.8108" width="0.75" layer="1"/>
-<wire x1="13.992" y1="94.8108" x2="13.992" y2="62.502" width="0.75" layer="1"/>
-<wire x1="11.96" y1="60.47" x2="13.992" y2="62.502" width="0.75" layer="1"/>
-<wire x1="39.62" y1="96.94" x2="43.28" y2="93.28" width="0.75" layer="1"/>
-<wire x1="16.12" y1="96.94" x2="39.62" y2="96.94" width="0.75" layer="1"/>
-<wire x1="16.1256" y1="96.9444" x2="16.12" y2="96.94" width="0" layer="19" extent="1-1"/>
+<wire x1="30.9338" y1="96.8428" x2="30.4098" y2="96.3188" width="0.75" layer="1"/>
+<wire x1="30.4098" y1="81.4519" x2="30.4098" y2="96.3188" width="0.75" layer="1"/>
+<wire x1="37.3962" y1="60.456328125" x2="37.3346" y2="60.5208" width="0.75" layer="16"/>
+<wire x1="39.7216" y1="96.8384" x2="43.28" y2="93.28" width="0.75" layer="1"/>
+<wire x1="30.9536" y1="96.8384" x2="39.7216" y2="96.8384" width="0.75" layer="1"/>
+<via x="37.3708" y="74.5202" extent="1-16" drill="0.35"/>
+<wire x1="37.3708" y1="74.5202" x2="37.3415" y2="74.5202" width="0.1524" layer="1"/>
+<wire x1="37.3415" y1="74.5202" x2="30.4098" y2="81.4519" width="0.75" layer="1"/>
+<wire x1="37.3708" y1="74.5202" x2="37.3708" y2="60.47" width="0.75" layer="16"/>
+<wire x1="37.3708" y1="60.47" x2="37.36" y2="60.47" width="0.1524" layer="16"/>
+<wire x1="30.9338" y1="96.8428" x2="30.9536" y2="96.8384" width="0" layer="19" extent="1-1"/>
+<wire x1="37.3962" y1="60.456328125" x2="37.36" y2="60.47" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="N$16">
 <contactref element="LLC" pad="LV2"/>
@@ -2748,8 +2804,8 @@ design rules under a new name.</description>
 <contactref element="BLUE1(TRIM-IN)" pad="MP"/>
 <wire x1="61.62" y1="10" x2="81.4" y2="10" width="0.75" layer="1"/>
 <wire x1="61.62" y1="10" x2="60.9" y2="10" width="0.75" layer="1"/>
-<wire x1="51.529634375" y1="21.601753125" x2="48.7513875" y2="24.38" width="0.75" layer="1"/>
-<wire x1="12.49" y1="24.38" x2="48.7513875" y2="24.38" width="0.75" layer="1"/>
+<wire x1="51.529634375" y1="21.550953125" x2="48.7005875" y2="24.38" width="0.75" layer="1"/>
+<wire x1="37.89" y1="24.38" x2="48.7005875" y2="24.38" width="0.75" layer="16"/>
 <wire x1="51.53" y1="21.55" x2="51.53" y2="13.92" width="0.75" layer="1"/>
 <wire x1="51.53" y1="13.92" x2="55.46" y2="9.99" width="0.75" layer="1"/>
 <wire x1="55.46" y1="9.99" x2="61.61" y2="9.99" width="0.75" layer="1"/>
@@ -2757,7 +2813,9 @@ design rules under a new name.</description>
 <wire x1="81.4" y1="10" x2="83.42" y2="12.02" width="0.75" layer="1"/>
 <wire x1="83.42" y1="12.02" x2="83.42" y2="14.95" width="0.75" layer="1"/>
 <wire x1="83.42" y1="14.95" x2="83.41" y2="14.96" width="0.1524" layer="1"/>
-<wire x1="51.529634375" y1="21.601753125" x2="51.53" y2="21.55" width="0" layer="19" extent="1-1"/>
+<via x="48.7005875" y="24.38" extent="1-16" drill="0.35"/>
+<wire x1="51.53" y1="21.55" x2="51.529634375" y2="21.550953125" width="0" layer="19" extent="1-1"/>
+<wire x1="37.89" y1="24.38" x2="48.7005875" y2="24.38" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$15">
 <contactref element="5V-VA" pad="B2,8"/>
@@ -2814,10 +2872,10 @@ design rules under a new name.</description>
 <signal name="N$11">
 <contactref element="LLC" pad="LV"/>
 <contactref element="U$1" pad="3V3"/>
-<wire x1="62.89" y1="48.41" x2="62.89" y2="24.62" width="0.75" layer="1"/>
-<wire x1="62.89" y1="48.41" x2="40.69" y2="70.61" width="0.75" layer="1"/>
-<wire x1="40.69" y1="83.07" x2="40.74" y2="83.12" width="0.75" layer="1"/>
-<wire x1="40.69" y1="83.07" x2="40.69" y2="70.61" width="0.75" layer="1"/>
+<wire x1="62.89" y1="49.5514" x2="62.89" y2="24.62" width="0.75" layer="1"/>
+<wire x1="62.89" y1="49.5514" x2="41.24085" y2="71.20055" width="0.75" layer="1"/>
+<wire x1="40.74" y1="83.12" x2="41.24085" y2="82.61915" width="0.75" layer="1"/>
+<wire x1="41.24085" y1="82.61915" x2="41.24085" y2="71.20055" width="0.75" layer="1"/>
 </signal>
 <signal name="N$7">
 <contactref element="R1" pad="2"/>
@@ -2844,4 +2902,21 @@ design rules under a new name.</description>
 </mfgpreviewcolors>
 </board>
 </drawing>
+<compatibility>
+<note version="8.2" severity="warning">
+Since Version 8.2, EAGLE supports online libraries. The ids
+of those online libraries will not be understood (or retained)
+with this version.
+</note>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports URNs for individual library
+assets (packages, symbols, and devices). The URNs of those assets
+will not be understood (or retained) with this version.
+</note>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports the association of 3D packages
+with devices in libraries, schematics, and board files. Those 3D
+packages will not be understood (or retained) with this version.
+</note>
+</compatibility>
 </eagle>

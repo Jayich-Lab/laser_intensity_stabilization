@@ -5803,6 +5803,7 @@ NS Package M08A</description>
 <part name="R5" library="resistor-shunt" deviceset="SMS-0" device="" value="4K"/>
 <part name="IC1" library="linear" deviceset="LF356" device="N"/>
 <part name="---15V" library="holes" deviceset="MOUNT-PAD-SQUARE" device="2.8"/>
+<part name="PAD1" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="1,6/0,8" device="" package3d_urn="urn:adsk.eagle:package:30830/1"/>
 <part name="PAD2" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="1,6/0,8" device="" package3d_urn="urn:adsk.eagle:package:30830/1"/>
 </parts>
 <sheets>
@@ -5891,9 +5892,13 @@ NS Package M08A</description>
 <instance part="---15V" gate="G$1" x="162.56" y="180.34" smashed="yes" rot="R180">
 <attribute name="NAME" x="159.766" y="179.7558" size="1.778" layer="95" rot="R180"/>
 </instance>
-<instance part="PAD2" gate="P" x="38.1" y="139.7" smashed="yes" rot="MR0">
-<attribute name="NAME" x="39.243" y="141.5542" size="1.778" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="39.243" y="136.398" size="1.778" layer="96" rot="MR0"/>
+<instance part="PAD1" gate="P" x="-35.56" y="134.62" smashed="yes" rot="MR0">
+<attribute name="NAME" x="-34.417" y="136.4742" size="1.778" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="-34.417" y="131.318" size="1.778" layer="96" rot="MR0"/>
+</instance>
+<instance part="PAD2" gate="P" x="71.12" y="149.86" smashed="yes" rot="MR270">
+<attribute name="NAME" x="69.2658" y="151.003" size="1.778" layer="95" rot="MR270"/>
+<attribute name="VALUE" x="74.422" y="151.003" size="1.778" layer="96" rot="MR270"/>
 </instance>
 </instances>
 <busses>
@@ -6097,6 +6102,8 @@ NS Package M08A</description>
 <wire x1="88.9" y1="55.88" x2="88.9" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="BLUE1(TRIM-IN)" gate="1" pin="MP"/>
 <wire x1="88.9" y1="20.32" x2="106.68" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="PAD2" gate="P" pin="P"/>
+<junction x="71.12" y="147.32"/>
 </segment>
 </net>
 <net name="N$15" class="0">

@@ -6,9 +6,9 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.01" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.05" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.005" altunitdist="mil" altunit="mil"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
 <layer number="3" name="Route3" color="17" fill="1" visible="no" active="no"/>
 <layer number="4" name="Route4" color="18" fill="1" visible="no" active="no"/>
@@ -23,17 +23,17 @@
 <layer number="13" name="Route13" color="21" fill="1" visible="no" active="no"/>
 <layer number="14" name="Route14" color="22" fill="1" visible="no" active="no"/>
 <layer number="15" name="Route15" color="23" fill="1" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="yes"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
@@ -46,20 +46,20 @@
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
-<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
-<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
-<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
@@ -2217,35 +2217,6 @@ www.isabellenhuette.de&lt;p&gt;
 </package>
 </packages>
 </library>
-<library name="wirepad" urn="urn:adsk.eagle:library:412">
-<description>&lt;b&gt;Single Pads&lt;/b&gt;&lt;p&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="3,81/1,4" urn="urn:adsk.eagle:footprint:30817/1" library_version="2">
-<description>&lt;b&gt;THROUGH-HOLE PAD&lt;/b&gt;</description>
-<wire x1="1.905" y1="-1.27" x2="1.905" y2="-1.905" width="0.1524" layer="21"/>
-<wire x1="1.905" y1="-1.905" x2="1.27" y2="-1.905" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="-1.905" x2="-1.905" y2="-1.905" width="0.1524" layer="21"/>
-<wire x1="-1.905" y1="-1.905" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-1.905" y1="1.27" x2="-1.905" y2="1.905" width="0.1524" layer="21"/>
-<wire x1="-1.905" y1="1.905" x2="-1.27" y2="1.905" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="1.905" x2="1.905" y2="1.905" width="0.1524" layer="21"/>
-<wire x1="1.905" y1="1.905" x2="1.905" y2="1.27" width="0.1524" layer="21"/>
-<circle x="0" y="0" radius="1.27" width="0.1524" layer="51"/>
-<pad name="1" x="0" y="0" drill="1.397" diameter="3.81" shape="octagon"/>
-<text x="-1.905" y="2.286" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="0" y="1.2" size="0.0254" layer="27">&gt;VALUE</text>
-</package>
-</packages>
-<packages3d>
-<package3d name="3,81/1,4" urn="urn:adsk.eagle:package:30835/1" type="box" library_version="2">
-<description>THROUGH-HOLE PAD</description>
-<packageinstances>
-<packageinstance name="3,81/1,4"/>
-</packageinstances>
-</package3d>
-</packages3d>
-</library>
 </libraries>
 <attributes>
 </attributes>
@@ -2593,11 +2564,6 @@ design rules under a new name.</description>
 <element name="V-TUNE" library="holes" package="2,8-PAD-SQUARE" value="MOUNT-PAD-SQUARE2.8" x="46.85" y="90.19" smashed="yes">
 <attribute name="POPULARITY" value="3" x="82.41" y="-17.76" size="1.778" layer="27" display="off"/>
 </element>
-<element name="PAD1" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="3,81/1,4" package3d_urn="urn:adsk.eagle:package:30835/1" value="" x="27.6" y="44.55" smashed="yes">
-<attribute name="NAME" x="25.695" y="46.836" size="1.27" layer="25" ratio="10"/>
-<attribute name="POPULARITY" value="14" x="27.6" y="44.55" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="27.6" y="45.75" size="0.0254" layer="27"/>
-</element>
 </elements>
 <signals>
 <signal name="GND" airwireshidden="yes">
@@ -2621,7 +2587,7 @@ design rules under a new name.</description>
 <contactref element="U$1" pad="GND_2"/>
 <contactref element="U$1" pad="5V_ICSP"/>
 <wire x1="69.1738" y1="64.9" x2="69.25" y2="64.8238" width="0.75" layer="1"/>
-<polygon width="0.1524" layer="16">
+<polygon width="0.1524" layer="16" rank="6">
 <vertex x="0" y="100"/>
 <vertex x="0" y="7.83"/>
 <vertex x="120" y="7.83"/>
@@ -2629,7 +2595,6 @@ design rules under a new name.</description>
 </polygon>
 <wire x1="91.4562" y1="82.15" x2="91.4562" y2="84.2438" width="0.75" layer="1"/>
 <wire x1="90.7" y1="85" x2="90.2" y2="85" width="0.75" layer="1"/>
-<via x="90.2" y="85" extent="1-16" drill="1"/>
 <wire x1="91.4562" y1="84.2438" x2="90.7" y2="85" width="0.75" layer="1"/>
 <wire x1="65.2362" y1="64.8238" x2="64.7838" y2="64.8238" width="0.75" layer="1"/>
 <wire x1="78.77" y1="51.53" x2="74.8" y2="55.5" width="0.75" layer="1"/>
@@ -2637,17 +2602,27 @@ design rules under a new name.</description>
 <wire x1="65.2362" y1="64.8238" x2="64.145" y2="65.915" width="0.75" layer="1"/>
 <wire x1="64.145" y1="65.915" x2="62.47" y2="67.59" width="0.75" layer="1"/>
 <wire x1="61.07" y1="67.59" x2="62.47" y2="67.59" width="0.75" layer="1"/>
-<via x="61.07" y="67.59" extent="1-16" drill="1"/>
 <wire x1="66.63" y1="55.5" x2="64.11" y2="58.02" width="0.75" layer="1"/>
 <wire x1="64.11" y1="58.02" x2="64.11" y2="65.88" width="0.75" layer="1"/>
 <wire x1="64.11" y1="65.88" x2="64.145" y2="65.915" width="0.75" layer="1"/>
 <wire x1="74.8" y1="55.5" x2="66.63" y2="55.5" width="0.75" layer="1"/>
-<polygon width="0.1524" layer="16">
-<vertex x="118.9" y="101.23"/>
-<vertex x="118.9" y="8.13"/>
-<vertex x="118.94" y="8.09"/>
-<vertex x="0.04" y="8.09"/>
-</polygon>
+<wire x1="91.4562" y1="82.15" x2="107.72" y2="81.95" width="0" layer="19" extent="1-1"/>
+<wire x1="69.25" y1="64.8238" x2="91.4562" y2="82.15" width="0" layer="19" extent="1-1"/>
+<wire x1="67.97" y1="47.48" x2="78.77" y2="51.53" width="0" layer="19" extent="1-1"/>
+<wire x1="45.11" y1="24.62" x2="67.97" y2="47.48" width="0" layer="19" extent="1-1"/>
+<wire x1="64.01" y1="14.96" x2="45.11" y2="24.62" width="0" layer="19" extent="1-1"/>
+<wire x1="37.74" y1="90.19" x2="61.07" y2="67.59" width="0" layer="19" extent="1-1"/>
+<wire x1="12.8" y1="93.28" x2="37.74" y2="90.19" width="0" layer="19" extent="1-1"/>
+<wire x1="12.8" y1="83.12" x2="12.8" y2="93.28" width="0" layer="19" extent="1-1"/>
+<wire x1="6.88" y1="65.55" x2="12.8" y2="83.12" width="0" layer="19" extent="1-1"/>
+<wire x1="11.96" y1="63.01" x2="6.88" y2="65.55" width="0" layer="19" extent="1-1"/>
+<wire x1="6.88" y1="55.39" x2="11.96" y2="63.01" width="0" layer="19" extent="1-1"/>
+<wire x1="7.08" y1="47.96" x2="6.88" y2="55.39" width="0" layer="19" extent="1-1"/>
+<wire x1="12.16" y1="45.42" x2="7.08" y2="47.96" width="0" layer="19" extent="1-1"/>
+<wire x1="7.08" y1="37.8" x2="12.16" y2="45.42" width="0" layer="19" extent="1-1"/>
+<wire x1="7.41" y1="29.46" x2="7.08" y2="37.8" width="0" layer="19" extent="1-1"/>
+<wire x1="12.49" y1="26.92" x2="7.41" y2="29.46" width="0" layer="19" extent="1-1"/>
+<wire x1="7.41" y1="19.3" x2="12.49" y2="26.92" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$3">
 <contactref element="R1" pad="1"/>
@@ -2807,8 +2782,8 @@ design rules under a new name.</description>
 <wire x1="15.34" y1="93.28" x2="15.34" y2="92.26" width="0.75" layer="1"/>
 <wire x1="15.34" y1="92.26" x2="17.765" y2="89.835" width="0.75" layer="1"/>
 <wire x1="27.98" y1="89.84" x2="28.32" y2="90.18" width="0" layer="19" extent="1-1"/>
-<wire x1="27.985" y1="89.835" x2="27.98" y2="89.84" width="0" layer="19" extent="1-1"/>
 <wire x1="27.98" y1="89.82" x2="27.98" y2="89.84" width="0" layer="19" extent="1-1"/>
+<wire x1="27.985" y1="89.835" x2="27.98" y2="89.84" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$20">
 <contactref element="TRIM-OUT1" pad="MP"/>
@@ -2859,6 +2834,18 @@ design rules under a new name.</description>
 <wire x1="86.93" y1="91.54" x2="82.88" y2="91.54" width="0.75" layer="1"/>
 <wire x1="80.31" y1="88.97" x2="82.88" y2="91.54" width="0.75" layer="1"/>
 </signal>
+<signal name="ISO">
+<polygon width="0.1524" layer="16" isolate="1.27">
+<vertex x="102.75" y="74.6"/>
+<vertex x="112.5" y="74.6"/>
+<vertex x="112.7" y="74.4"/>
+<vertex x="112.7" y="63.75"/>
+<vertex x="112.95" y="63.5"/>
+<vertex x="103.6" y="63.5"/>
+<vertex x="103.15" y="63.95"/>
+<vertex x="103.15" y="74.2"/>
+</polygon>
+</signal>
 </signals>
 <mfgpreviewcolors>
 <mfgpreviewcolor name="soldermaskcolor" color="0xC8008000"/>
@@ -2869,21 +2856,4 @@ design rules under a new name.</description>
 </mfgpreviewcolors>
 </board>
 </drawing>
-<compatibility>
-<note version="8.2" severity="warning">
-Since Version 8.2, EAGLE supports online libraries. The ids
-of those online libraries will not be understood (or retained)
-with this version.
-</note>
-<note version="8.3" severity="warning">
-Since Version 8.3, EAGLE supports URNs for individual library
-assets (packages, symbols, and devices). The URNs of those assets
-will not be understood (or retained) with this version.
-</note>
-<note version="8.3" severity="warning">
-Since Version 8.3, EAGLE supports the association of 3D packages
-with devices in libraries, schematics, and board files. Those 3D
-packages will not be understood (or retained) with this version.
-</note>
-</compatibility>
 </eagle>

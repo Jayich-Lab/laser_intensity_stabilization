@@ -5707,6 +5707,67 @@ NS Package M08A</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="wirepad" urn="urn:adsk.eagle:library:412">
+<description>&lt;b&gt;Single Pads&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="1,6/0,9" urn="urn:adsk.eagle:footprint:30812/1" library_version="2">
+<description>&lt;b&gt;THROUGH-HOLE PAD&lt;/b&gt;</description>
+<wire x1="-0.508" y1="0.762" x2="-0.762" y2="0.762" width="0.1524" layer="21"/>
+<wire x1="-0.762" y1="0.762" x2="-0.762" y2="0.508" width="0.1524" layer="21"/>
+<wire x1="-0.762" y1="-0.508" x2="-0.762" y2="-0.762" width="0.1524" layer="21"/>
+<wire x1="-0.762" y1="-0.762" x2="-0.508" y2="-0.762" width="0.1524" layer="21"/>
+<wire x1="0.508" y1="-0.762" x2="0.762" y2="-0.762" width="0.1524" layer="21"/>
+<wire x1="0.762" y1="-0.762" x2="0.762" y2="-0.508" width="0.1524" layer="21"/>
+<wire x1="0.762" y1="0.508" x2="0.762" y2="0.762" width="0.1524" layer="21"/>
+<wire x1="0.762" y1="0.762" x2="0.508" y2="0.762" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="0.635" width="0.1524" layer="51"/>
+<pad name="1" x="0" y="0" drill="0.9144" diameter="1.6002" shape="octagon"/>
+<text x="-0.762" y="1.016" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="0" y="0.6" size="0.0254" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<packages3d>
+<package3d name="1,6/0,9" urn="urn:adsk.eagle:package:30840/1" type="box" library_version="2">
+<description>THROUGH-HOLE PAD</description>
+<packageinstances>
+<packageinstance name="1,6/0,9"/>
+</packageinstances>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="PAD" urn="urn:adsk.eagle:symbol:30808/1" library_version="2">
+<wire x1="-1.016" y1="1.016" x2="1.016" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="-1.016" x2="1.016" y2="1.016" width="0.254" layer="94"/>
+<text x="-1.143" y="1.8542" size="1.778" layer="95">&gt;NAME</text>
+<text x="-1.143" y="-3.302" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="P" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="1,6/0,9" urn="urn:adsk.eagle:component:30858/2" prefix="PAD" uservalue="yes" library_version="2">
+<description>&lt;b&gt;THROUGH-HOLE PAD&lt;/b&gt;</description>
+<gates>
+<gate name="1" symbol="PAD" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="1,6/0,9">
+<connects>
+<connect gate="1" pin="P" pad="1"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:30840/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="POPULARITY" value="7" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -5742,6 +5803,9 @@ NS Package M08A</description>
 <part name="R5" library="resistor-shunt" deviceset="SMS-0" device="" value="4K"/>
 <part name="IC1" library="linear" deviceset="LF356" device="N"/>
 <part name="---15V" library="holes" deviceset="MOUNT-PAD-SQUARE" device="2.8"/>
+<part name="PAD1" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="1,6/0,9" device="" package3d_urn="urn:adsk.eagle:package:30840/1"/>
+<part name="PAD2" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="1,6/0,9" device="" package3d_urn="urn:adsk.eagle:package:30840/1"/>
+<part name="PAD3" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="1,6/0,9" device="" package3d_urn="urn:adsk.eagle:package:30840/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -5770,14 +5834,14 @@ NS Package M08A</description>
 <attribute name="NAME" x="161.1884" y="146.05" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="165.481" y="146.05" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="PD" gate="G$1" x="63.5" y="144.78" smashed="yes">
-<attribute name="NAME" x="58.41488125" y="150.500759375" size="1.42383125" layer="95"/>
+<instance part="PD" gate="G$1" x="63.5" y="144.78" smashed="yes" rot="MR0">
+<attribute name="NAME" x="68.58511875" y="150.500759375" size="1.42383125" layer="95" rot="MR0"/>
 </instance>
-<instance part="TTL-1" gate="G$1" x="63.5" y="121.92" smashed="yes">
-<attribute name="NAME" x="58.41488125" y="127.640759375" size="1.42383125" layer="95"/>
+<instance part="TTL-1" gate="G$1" x="63.5" y="121.92" smashed="yes" rot="MR0">
+<attribute name="NAME" x="68.58511875" y="127.640759375" size="1.42383125" layer="95" rot="MR0"/>
 </instance>
-<instance part="TTL-2" gate="G$1" x="63.5" y="99.06" smashed="yes">
-<attribute name="NAME" x="58.41488125" y="104.780759375" size="1.42383125" layer="95"/>
+<instance part="TTL-2" gate="G$1" x="63.5" y="99.06" smashed="yes" rot="MR0">
+<attribute name="NAME" x="68.58511875" y="104.780759375" size="1.42383125" layer="95" rot="MR0"/>
 </instance>
 <instance part="FILTER" gate="G$1" x="231.14" y="127" smashed="yes" rot="R90">
 <attribute name="NAME" x="230.124" y="129.921" size="1.778" layer="95"/>
@@ -5829,6 +5893,18 @@ NS Package M08A</description>
 <instance part="---15V" gate="G$1" x="162.56" y="180.34" smashed="yes" rot="R180">
 <attribute name="NAME" x="159.766" y="179.7558" size="1.778" layer="95" rot="R180"/>
 </instance>
+<instance part="PAD1" gate="1" x="40.64" y="152.4" smashed="yes">
+<attribute name="NAME" x="39.497" y="154.2542" size="1.778" layer="95"/>
+<attribute name="VALUE" x="39.497" y="149.098" size="1.778" layer="96"/>
+</instance>
+<instance part="PAD2" gate="1" x="40.64" y="147.32" smashed="yes">
+<attribute name="NAME" x="39.497" y="149.1742" size="1.778" layer="95"/>
+<attribute name="VALUE" x="39.497" y="144.018" size="1.778" layer="96"/>
+</instance>
+<instance part="PAD3" gate="1" x="40.64" y="142.24" smashed="yes">
+<attribute name="NAME" x="39.497" y="144.0942" size="1.778" layer="95"/>
+<attribute name="VALUE" x="39.497" y="138.938" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -5837,22 +5913,22 @@ NS Package M08A</description>
 <segment>
 <pinref part="TTL-2" gate="G$1" pin="2"/>
 <pinref part="TTL-2" gate="G$1" pin="SHIELD"/>
-<wire x1="71.12" y1="99.06" x2="71.12" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="93.98" x2="50.8" y2="93.98" width="0.1524" layer="91"/>
-<junction x="71.12" y="93.98"/>
+<wire x1="55.88" y1="99.06" x2="55.88" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="93.98" x2="50.8" y2="93.98" width="0.1524" layer="91"/>
+<junction x="55.88" y="93.98"/>
 <pinref part="TTL-1" gate="G$1" pin="2"/>
 <pinref part="TTL-1" gate="G$1" pin="SHIELD"/>
-<wire x1="71.12" y1="121.92" x2="71.12" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="121.92" x2="55.88" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="93.98" x2="50.8" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="116.84" x2="71.12" y2="116.84" width="0.1524" layer="91"/>
-<junction x="71.12" y="116.84"/>
+<wire x1="50.8" y1="116.84" x2="55.88" y2="116.84" width="0.1524" layer="91"/>
+<junction x="55.88" y="116.84"/>
 <pinref part="PD" gate="G$1" pin="2"/>
 <pinref part="PD" gate="G$1" pin="SHIELD"/>
-<wire x1="71.12" y1="144.78" x2="71.12" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="144.78" x2="55.88" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="116.84" x2="50.8" y2="139.7" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="139.7" x2="71.12" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="139.7" x2="55.88" y2="139.7" width="0.1524" layer="91"/>
 <junction x="50.8" y="116.84"/>
-<junction x="71.12" y="139.7"/>
+<junction x="55.88" y="139.7"/>
 <wire x1="50.8" y1="139.7" x2="50.8" y2="170.18" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="170.18" x2="93.98" y2="170.18" width="0.1524" layer="91"/>
 <junction x="50.8" y="139.7"/>
@@ -5870,7 +5946,7 @@ NS Package M08A</description>
 <pinref part="GND-VVA" gate="G$1" pin="MOUNT"/>
 <wire x1="241.3" y1="142.24" x2="241.3" y2="127" width="0.1524" layer="91"/>
 <wire x1="241.3" y1="127" x2="241.3" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="93.98" x2="88.9" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="93.98" x2="88.9" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="LLC" gate="G$1" pin="GND"/>
 <wire x1="88.9" y1="93.98" x2="88.9" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="88.9" y1="60.96" x2="63.5" y2="60.96" width="0.1524" layer="91"/>
@@ -5974,7 +6050,7 @@ NS Package M08A</description>
 <net name="N$12" class="0">
 <segment>
 <pinref part="TTL-1" gate="G$1" pin="1"/>
-<wire x1="71.12" y1="124.46" x2="73.66" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="124.46" x2="73.66" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="124.46" x2="73.66" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="LLC" gate="G$1" pin="HV1"/>
 <wire x1="73.66" y1="73.66" x2="63.5" y2="73.66" width="0.1524" layer="91"/>
@@ -5983,7 +6059,7 @@ NS Package M08A</description>
 <net name="N$13" class="0">
 <segment>
 <pinref part="TTL-2" gate="G$1" pin="1"/>
-<wire x1="71.12" y1="101.6" x2="76.2" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="101.6" x2="76.2" y2="101.6" width="0.1524" layer="91"/>
 <pinref part="LLC" gate="G$1" pin="HV2"/>
 <wire x1="76.2" y1="101.6" x2="76.2" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="71.12" x2="63.5" y2="71.12" width="0.1524" layer="91"/>
@@ -6025,7 +6101,7 @@ NS Package M08A</description>
 <net name="N$14" class="0">
 <segment>
 <pinref part="PD" gate="G$1" pin="1"/>
-<wire x1="71.12" y1="147.32" x2="81.28" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="147.32" x2="81.28" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="147.32" x2="81.28" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="55.88" x2="88.9" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="88.9" y1="55.88" x2="88.9" y2="20.32" width="0.1524" layer="91"/>
@@ -6140,4 +6216,21 @@ NS Package M08A</description>
 </sheets>
 </schematic>
 </drawing>
+<compatibility>
+<note version="8.2" severity="warning">
+Since Version 8.2, EAGLE supports online libraries. The ids
+of those online libraries will not be understood (or retained)
+with this version.
+</note>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports URNs for individual library
+assets (packages, symbols, and devices). The URNs of those assets
+will not be understood (or retained) with this version.
+</note>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports the association of 3D packages
+with devices in libraries, schematics, and board files. Those 3D
+packages will not be understood (or retained) with this version.
+</note>
+</compatibility>
 </eagle>
