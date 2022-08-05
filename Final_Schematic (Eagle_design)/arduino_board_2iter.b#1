@@ -2217,6 +2217,35 @@ www.isabellenhuette.de&lt;p&gt;
 </package>
 </packages>
 </library>
+<library name="wirepad" urn="urn:adsk.eagle:library:412">
+<description>&lt;b&gt;Single Pads&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="1,6/0,9" urn="urn:adsk.eagle:footprint:30812/1" library_version="2">
+<description>&lt;b&gt;THROUGH-HOLE PAD&lt;/b&gt;</description>
+<wire x1="-0.508" y1="0.762" x2="-0.762" y2="0.762" width="0.1524" layer="21"/>
+<wire x1="-0.762" y1="0.762" x2="-0.762" y2="0.508" width="0.1524" layer="21"/>
+<wire x1="-0.762" y1="-0.508" x2="-0.762" y2="-0.762" width="0.1524" layer="21"/>
+<wire x1="-0.762" y1="-0.762" x2="-0.508" y2="-0.762" width="0.1524" layer="21"/>
+<wire x1="0.508" y1="-0.762" x2="0.762" y2="-0.762" width="0.1524" layer="21"/>
+<wire x1="0.762" y1="-0.762" x2="0.762" y2="-0.508" width="0.1524" layer="21"/>
+<wire x1="0.762" y1="0.508" x2="0.762" y2="0.762" width="0.1524" layer="21"/>
+<wire x1="0.762" y1="0.762" x2="0.508" y2="0.762" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="0.635" width="0.1524" layer="51"/>
+<pad name="1" x="0" y="0" drill="0.9144" diameter="1.6002" shape="octagon"/>
+<text x="-0.762" y="1.016" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="0" y="0.6" size="0.0254" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<packages3d>
+<package3d name="1,6/0,9" urn="urn:adsk.eagle:package:30840/1" type="box" library_version="2">
+<description>THROUGH-HOLE PAD</description>
+<packageinstances>
+<packageinstance name="1,6/0,9"/>
+</packageinstances>
+</package3d>
+</packages3d>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -2564,6 +2593,21 @@ design rules under a new name.</description>
 <element name="V-TUNE" library="holes" package="2,8-PAD-SQUARE" value="MOUNT-PAD-SQUARE2.8" x="72.25" y="90.19" smashed="yes">
 <attribute name="POPULARITY" value="3" x="107.81" y="-17.76" size="1.778" layer="27" display="off"/>
 </element>
+<element name="PAD1" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="1,6/0,9" package3d_urn="urn:adsk.eagle:package:30840/1" value="" x="34.2138" y="74.4982" smashed="yes">
+<attribute name="NAME" x="33.4518" y="75.5142" size="1.27" layer="25" ratio="10"/>
+<attribute name="POPULARITY" value="7" x="34.2138" y="74.4982" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="34.2138" y="75.0982" size="0.0254" layer="27"/>
+</element>
+<element name="PAD2" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="1,6/0,9" package3d_urn="urn:adsk.eagle:package:30840/1" value="" x="37.338" y="74.549" smashed="yes">
+<attribute name="NAME" x="36.576" y="75.565" size="1.27" layer="25" ratio="10"/>
+<attribute name="POPULARITY" value="7" x="37.338" y="74.549" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="37.338" y="75.149" size="0.0254" layer="27"/>
+</element>
+<element name="PAD3" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="1,6/0,9" package3d_urn="urn:adsk.eagle:package:30840/1" value="" x="48.7172" y="24.4094" smashed="yes">
+<attribute name="NAME" x="47.9552" y="25.4254" size="1.27" layer="25" ratio="10"/>
+<attribute name="POPULARITY" value="7" x="48.7172" y="24.4094" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="48.7172" y="25.0094" size="0.0254" layer="27"/>
+</element>
 </elements>
 <signals>
 <signal name="GND" airwireshidden="yes">
@@ -2706,15 +2750,21 @@ design rules under a new name.</description>
 <wire x1="37.56" y1="42.88" x2="37.3716" y2="43.0684" width="0.75" layer="16"/>
 <wire x1="41.49184375" y1="98.20815625" x2="45.82" y2="93.88" width="0.75" layer="1"/>
 <wire x1="45.82" y1="93.88" x2="45.82" y2="93.28" width="0.75" layer="1"/>
-<via x="35.131959375" y="74.5255625" extent="1-16" drill="0.35"/>
+<via x="34.166759375" y="74.5001625" extent="1-16" drill="0.35"/>
 <wire x1="28.29985" y1="81.313146875" x2="28.31021875" y2="81.302778125" width="0.75" layer="1"/>
 <wire x1="28.29985" y1="96.33936875" x2="30.1869" y2="98.22641875" width="0.75" layer="1"/>
 <wire x1="30.1869" y1="98.22641875" x2="41.47358125" y2="98.22641875" width="0.75" layer="1"/>
 <wire x1="41.47358125" y1="98.22641875" x2="41.49184375" y2="98.20815625" width="0.1524" layer="1"/>
-<wire x1="35.131959375" y1="74.5255625" x2="28.344375" y2="81.313146875" width="0.75" layer="1"/>
-<wire x1="28.344375" y1="81.313146875" x2="28.29985" y2="81.313146875" width="0.1524" layer="1"/>
-<wire x1="35.131959375" y1="74.5255625" x2="35.131959375" y2="45.308040625" width="0.75" layer="16"/>
-<wire x1="35.131959375" y1="45.308040625" x2="37.56" y2="42.88" width="0.75" layer="16"/>
+<wire x1="34.166759375" y1="74.5001625" x2="32.395034375" y2="74.5001625" width="0.75" layer="1"/>
+<wire x1="32.395034375" y1="74.5001625" x2="28.31021875" y2="78.584978125" width="0.75" layer="1"/>
+<wire x1="28.31021875" y1="78.584978125" x2="28.31021875" y2="81.302778125" width="0.75" layer="1"/>
+<wire x1="39.703959375" y1="76.2781625" x2="39.703959375" y2="45.023959375" width="0.75" layer="16"/>
+<wire x1="37.56" y1="42.88" x2="39.703959375" y2="45.023959375" width="0.75" layer="16"/>
+<wire x1="39.703959375" y1="76.2781625" x2="38.103759375" y2="77.8783625" width="0.75" layer="16"/>
+<wire x1="38.103759375" y1="77.8783625" x2="36.5271625" y2="77.8783625" width="0.75" layer="16"/>
+<wire x1="36.5271625" y1="77.8783625" x2="34.163" y2="75.5142" width="0.75" layer="16"/>
+<wire x1="34.163" y1="75.5142" x2="34.163" y2="74.4982" width="0.75" layer="16"/>
+<wire x1="34.163" y1="74.4982" x2="34.166759375" y2="74.5001625" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="N$13">
 <contactref element="TTL-2" pad="1"/>
@@ -2858,4 +2908,21 @@ design rules under a new name.</description>
 </mfgpreviewcolors>
 </board>
 </drawing>
+<compatibility>
+<note version="8.2" severity="warning">
+Since Version 8.2, EAGLE supports online libraries. The ids
+of those online libraries will not be understood (or retained)
+with this version.
+</note>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports URNs for individual library
+assets (packages, symbols, and devices). The URNs of those assets
+will not be understood (or retained) with this version.
+</note>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports the association of 3D packages
+with devices in libraries, schematics, and board files. Those 3D
+packages will not be understood (or retained) with this version.
+</note>
+</compatibility>
 </eagle>
