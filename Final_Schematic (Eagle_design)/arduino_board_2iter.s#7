@@ -5891,9 +5891,9 @@ NS Package M08A</description>
 <instance part="---15V" gate="G$1" x="162.56" y="180.34" smashed="yes" rot="R180">
 <attribute name="NAME" x="159.766" y="179.7558" size="1.778" layer="95" rot="R180"/>
 </instance>
-<instance part="PAD2" gate="P" x="38.1" y="139.7" smashed="yes" rot="MR0">
-<attribute name="NAME" x="39.243" y="141.5542" size="1.778" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="39.243" y="136.398" size="1.778" layer="96" rot="MR0"/>
+<instance part="PAD2" gate="P" x="66.04" y="78.74" smashed="yes" rot="MR0">
+<attribute name="NAME" x="67.183" y="80.5942" size="1.778" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="67.183" y="75.438" size="1.778" layer="96" rot="MR0"/>
 </instance>
 </instances>
 <busses>
@@ -6123,6 +6123,8 @@ NS Package M08A</description>
 <wire x1="147.32" y1="165.1" x2="144.78" y2="165.1" width="0.1524" layer="91"/>
 <junction x="144.78" y="165.1"/>
 <wire x1="144.78" y1="160.02" x2="144.78" y2="165.1" width="0.1524" layer="91"/>
+<pinref part="PAD2" gate="P" pin="P"/>
+<junction x="63.5" y="78.74"/>
 </segment>
 </net>
 <net name="N$20" class="0">

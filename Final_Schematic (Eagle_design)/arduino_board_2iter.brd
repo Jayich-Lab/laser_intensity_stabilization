@@ -8,7 +8,7 @@
 </settings>
 <grid distance="1" unitdist="mil" unit="inch" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
 <layer number="3" name="Route3" color="17" fill="1" visible="no" active="no"/>
 <layer number="4" name="Route4" color="18" fill="1" visible="no" active="no"/>
@@ -28,11 +28,11 @@
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="yes"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
@@ -46,9 +46,9 @@
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
-<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
@@ -58,7 +58,7 @@
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
@@ -2608,6 +2608,16 @@ design rules under a new name.</description>
 <attribute name="POPULARITY" value="7" x="48.7172" y="24.4094" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="48.7172" y="25.0094" size="0.0254" layer="27"/>
 </element>
+<element name="PAD4" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="1,6/0,9" package3d_urn="urn:adsk.eagle:package:30840/1" value="" x="113.7158" y="85.0646" smashed="yes">
+<attribute name="NAME" x="112.9538" y="86.0806" size="1.27" layer="25" ratio="10"/>
+<attribute name="POPULARITY" value="7" x="113.7158" y="85.0646" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="113.7158" y="85.6646" size="0.0254" layer="27"/>
+</element>
+<element name="PAD5" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="1,6/0,9" package3d_urn="urn:adsk.eagle:package:30840/1" value="" x="86.4616" y="67.5894" smashed="yes">
+<attribute name="NAME" x="85.6996" y="68.6054" size="1.27" layer="25" ratio="10"/>
+<attribute name="POPULARITY" value="7" x="86.4616" y="67.5894" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="86.4616" y="68.1894" size="0.0254" layer="27"/>
+</element>
 </elements>
 <signals>
 <signal name="GND" airwireshidden="yes">
@@ -2638,8 +2648,8 @@ design rules under a new name.</description>
 <vertex x="145.4" y="100"/>
 </polygon>
 <wire x1="116.8562" y1="82.15" x2="116.8562" y2="84.2438" width="0.75" layer="1"/>
-<wire x1="116.1" y1="85" x2="115.6" y2="85" width="0.75" layer="1"/>
-<wire x1="116.8562" y1="84.2438" x2="116.1" y2="85" width="0.75" layer="1"/>
+<wire x1="116.0492" y1="85.0508" x2="113.695" y2="85.0508" width="0.75" layer="1"/>
+<wire x1="116.8562" y1="84.2438" x2="116.0492" y2="85.0508" width="0.75" layer="1"/>
 <wire x1="90.6362" y1="64.8238" x2="90.1838" y2="64.8238" width="0.75" layer="1"/>
 <wire x1="104.17" y1="51.53" x2="100.2" y2="55.5" width="0.75" layer="1"/>
 <wire x1="94.65" y1="64.8238" x2="90.6362" y2="64.8238" width="0.75" layer="1"/>

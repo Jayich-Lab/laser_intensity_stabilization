@@ -5770,14 +5770,14 @@ NS Package M08A</description>
 <attribute name="NAME" x="161.1884" y="146.05" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="165.481" y="146.05" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="PD" gate="G$1" x="63.5" y="144.78" smashed="yes">
-<attribute name="NAME" x="58.41488125" y="150.500759375" size="1.42383125" layer="95"/>
+<instance part="PD" gate="G$1" x="63.5" y="144.78" smashed="yes" rot="MR0">
+<attribute name="NAME" x="68.58511875" y="150.500759375" size="1.42383125" layer="95" rot="MR0"/>
 </instance>
-<instance part="TTL-1" gate="G$1" x="63.5" y="121.92" smashed="yes">
-<attribute name="NAME" x="58.41488125" y="127.640759375" size="1.42383125" layer="95"/>
+<instance part="TTL-1" gate="G$1" x="63.5" y="121.92" smashed="yes" rot="MR0">
+<attribute name="NAME" x="68.58511875" y="127.640759375" size="1.42383125" layer="95" rot="MR0"/>
 </instance>
-<instance part="TTL-2" gate="G$1" x="63.5" y="99.06" smashed="yes">
-<attribute name="NAME" x="58.41488125" y="104.780759375" size="1.42383125" layer="95"/>
+<instance part="TTL-2" gate="G$1" x="63.5" y="99.06" smashed="yes" rot="MR0">
+<attribute name="NAME" x="68.58511875" y="104.780759375" size="1.42383125" layer="95" rot="MR0"/>
 </instance>
 <instance part="FILTER" gate="G$1" x="231.14" y="127" smashed="yes" rot="R90">
 <attribute name="NAME" x="230.124" y="129.921" size="1.778" layer="95"/>
@@ -5837,22 +5837,22 @@ NS Package M08A</description>
 <segment>
 <pinref part="TTL-2" gate="G$1" pin="2"/>
 <pinref part="TTL-2" gate="G$1" pin="SHIELD"/>
-<wire x1="71.12" y1="99.06" x2="71.12" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="93.98" x2="50.8" y2="93.98" width="0.1524" layer="91"/>
-<junction x="71.12" y="93.98"/>
+<wire x1="55.88" y1="99.06" x2="55.88" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="93.98" x2="50.8" y2="93.98" width="0.1524" layer="91"/>
+<junction x="55.88" y="93.98"/>
 <pinref part="TTL-1" gate="G$1" pin="2"/>
 <pinref part="TTL-1" gate="G$1" pin="SHIELD"/>
-<wire x1="71.12" y1="121.92" x2="71.12" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="121.92" x2="55.88" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="93.98" x2="50.8" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="116.84" x2="71.12" y2="116.84" width="0.1524" layer="91"/>
-<junction x="71.12" y="116.84"/>
+<wire x1="50.8" y1="116.84" x2="55.88" y2="116.84" width="0.1524" layer="91"/>
+<junction x="55.88" y="116.84"/>
 <pinref part="PD" gate="G$1" pin="2"/>
 <pinref part="PD" gate="G$1" pin="SHIELD"/>
-<wire x1="71.12" y1="144.78" x2="71.12" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="144.78" x2="55.88" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="116.84" x2="50.8" y2="139.7" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="139.7" x2="71.12" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="139.7" x2="55.88" y2="139.7" width="0.1524" layer="91"/>
 <junction x="50.8" y="116.84"/>
-<junction x="71.12" y="139.7"/>
+<junction x="55.88" y="139.7"/>
 <wire x1="50.8" y1="139.7" x2="50.8" y2="170.18" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="170.18" x2="93.98" y2="170.18" width="0.1524" layer="91"/>
 <junction x="50.8" y="139.7"/>
@@ -5870,7 +5870,7 @@ NS Package M08A</description>
 <pinref part="GND-VVA" gate="G$1" pin="MOUNT"/>
 <wire x1="241.3" y1="142.24" x2="241.3" y2="127" width="0.1524" layer="91"/>
 <wire x1="241.3" y1="127" x2="241.3" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="93.98" x2="88.9" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="93.98" x2="88.9" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="LLC" gate="G$1" pin="GND"/>
 <wire x1="88.9" y1="93.98" x2="88.9" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="88.9" y1="60.96" x2="63.5" y2="60.96" width="0.1524" layer="91"/>
@@ -5974,7 +5974,7 @@ NS Package M08A</description>
 <net name="N$12" class="0">
 <segment>
 <pinref part="TTL-1" gate="G$1" pin="1"/>
-<wire x1="71.12" y1="124.46" x2="73.66" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="124.46" x2="73.66" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="124.46" x2="73.66" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="LLC" gate="G$1" pin="HV1"/>
 <wire x1="73.66" y1="73.66" x2="63.5" y2="73.66" width="0.1524" layer="91"/>
@@ -5983,7 +5983,7 @@ NS Package M08A</description>
 <net name="N$13" class="0">
 <segment>
 <pinref part="TTL-2" gate="G$1" pin="1"/>
-<wire x1="71.12" y1="101.6" x2="76.2" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="101.6" x2="76.2" y2="101.6" width="0.1524" layer="91"/>
 <pinref part="LLC" gate="G$1" pin="HV2"/>
 <wire x1="76.2" y1="101.6" x2="76.2" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="71.12" x2="63.5" y2="71.12" width="0.1524" layer="91"/>
@@ -6025,7 +6025,7 @@ NS Package M08A</description>
 <net name="N$14" class="0">
 <segment>
 <pinref part="PD" gate="G$1" pin="1"/>
-<wire x1="71.12" y1="147.32" x2="81.28" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="147.32" x2="81.28" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="147.32" x2="81.28" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="55.88" x2="88.9" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="88.9" y1="55.88" x2="88.9" y2="20.32" width="0.1524" layer="91"/>

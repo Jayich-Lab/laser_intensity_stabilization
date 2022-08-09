@@ -5806,6 +5806,8 @@ NS Package M08A</description>
 <part name="PAD1" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="1,6/0,9" device="" package3d_urn="urn:adsk.eagle:package:30840/1"/>
 <part name="PAD2" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="1,6/0,9" device="" package3d_urn="urn:adsk.eagle:package:30840/1"/>
 <part name="PAD3" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="1,6/0,9" device="" package3d_urn="urn:adsk.eagle:package:30840/1"/>
+<part name="PAD4" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="1,6/0,9" device="" package3d_urn="urn:adsk.eagle:package:30840/1"/>
+<part name="PAD5" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="1,6/0,9" device="" package3d_urn="urn:adsk.eagle:package:30840/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -5904,6 +5906,14 @@ NS Package M08A</description>
 <instance part="PAD3" gate="1" x="40.64" y="142.24" smashed="yes">
 <attribute name="NAME" x="39.497" y="144.0942" size="1.778" layer="95"/>
 <attribute name="VALUE" x="39.497" y="138.938" size="1.778" layer="96"/>
+</instance>
+<instance part="PAD4" gate="1" x="40.64" y="137.16" smashed="yes">
+<attribute name="NAME" x="39.497" y="139.0142" size="1.778" layer="95"/>
+<attribute name="VALUE" x="39.497" y="133.858" size="1.778" layer="96"/>
+</instance>
+<instance part="PAD5" gate="1" x="40.64" y="132.08" smashed="yes">
+<attribute name="NAME" x="39.497" y="133.9342" size="1.778" layer="95"/>
+<attribute name="VALUE" x="39.497" y="128.778" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
